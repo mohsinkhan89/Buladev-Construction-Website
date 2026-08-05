@@ -3270,6 +3270,16 @@ h3,
 }
 
 @media (max-width: 510px) {
+  .stats-grid-secondary {
+    bottom: -30px;
+  }
+  .py-14 {
+    padding-bottom: 0rem;
+  }
+    .modern-filter-row .modern-filter-button:nth-child(5),
+  .service-grid .service-card:nth-child(5) {
+    grid-column: 1 / -1;
+  }
   .image-match-footer .logo-block {
     width: 250px;
   }
