@@ -969,7 +969,7 @@ video {
   margin-top: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
-  font-weight: 900;
+  font-weight: 600!important;
   text-transform: uppercase;
   line-height: 1.25;
   --tw-text-opacity: 1;
@@ -2022,4 +2022,206 @@ html {
   border-color: rgba(245, 114, 22, 0.55);
   color: #f57216;
   background: rgba(245, 114, 22, 0.12);
+}
+/* Screenshot-style ready CTA */
+.image-match-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.35rem;
+  min-height: 86px;
+  padding: 1.05rem 1.45rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: #071018;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 16px 42px rgba(7, 16, 24, 0.18);
+}
+
+.image-match-cta::before {
+  content: none;
+}
+
+.image-match-cta-copy {
+  min-width: 0;
+}
+
+.image-match-cta-copy h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.25rem, 2.15vw, 1.85rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.image-match-cta-copy p {
+  margin: 0.5rem 0 0;
+  color: #d4d4d8;
+  font-size: clamp(0.72rem, 1.2vw, 0.9rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.image-match-cta-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.image-match-cta-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 42px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding-left: 1.35rem;
+  color: #ffffff;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.image-match-cta-phone-icon {
+  display: inline-grid;
+  height: 2.4rem;
+  width: 2.4rem;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(245, 114, 22, 0.12);
+  color: #f57216;
+}
+
+.image-match-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  min-width: 170px;
+  border-radius: 6px;
+  background: #f57216;
+  padding: 0.75rem 1.15rem;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 10px 24px rgba(245, 114, 22, 0.22);
+}
+
+.image-match-cta-button:hover {
+  background: #ea580c;
+}
+
+@media (max-width: 760px) {
+  .image-match-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .image-match-cta-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .image-match-cta-phone {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .image-match-cta-button {
+    flex: 1 1 180px;
+  }
+}
+/* Screenshot-style stats cards */
+.stats-grid {
+  width: 100%;
+  min-height: 104px;
+  border-radius: 8px;
+  background-image:
+    linear-gradient(rgba(5, 11, 17, 0.34), rgba(5, 11, 17, 0.34)),
+    url("/img/banners/cards-banner.png");
+}
+
+.stat-card {
+  min-height: 104px;
+  padding: 0.95rem 1rem;
+  align-content: center;
+  gap: 0.15rem;
+}
+
+.stat-card::before {
+  inset: 14px 15px;
+  border-color: rgba(245, 114, 22, 0.5);
+  opacity: 0.72;
+}
+
+.stat-card::before {
+  border-color: rgba(245, 114, 22, 0.12);
+  opacity: 0.2;
+}
+
+.stat-value,
+.stat-label {
+  max-width: 10ch;
+  margin-inline: auto;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-shadow: 0 7px 16px rgba(0, 0, 0, 0.72);
+}
+
+.stat-value {
+  font-size: clamp(1.18rem, 1.6vw, 1.55rem);
+  line-height: 0.98;
+}
+
+.stat-label {
+  margin-top: 0.32rem;
+  font-size: clamp(0.64rem, 0.85vw, 0.78rem);
+  line-height: 1.08;
+}
+
+.stat-card:nth-child(1) .stat-value,
+.stat-card:nth-child(2) .stat-value {
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  line-height: 0.88;
+}
+
+.stat-card:nth-child(1) .stat-label,
+.stat-card:nth-child(2) .stat-label {
+  max-width: 8.6ch;
+  font-size: clamp(0.62rem, 0.8vw, 0.72rem);
+  line-height: 1.02;
+}
+
+.stat-card:nth-child(3) .stat-value {
+  max-width: 8.2ch;
+  font-size: clamp(1.05rem, 1.45vw, 1.42rem);
+  line-height: 1.02;
+}
+
+.stat-card:nth-child(3) .stat-label,
+.stat-card:nth-child(4) .stat-label,
+.stat-card:nth-child(5) .stat-label {
+  font-size: clamp(0.95rem, 1.25vw, 1.25rem);
+  line-height: 1.02;
+}
+
+.stat-card:nth-child(4) .stat-value,
+.stat-card:nth-child(5) .stat-value {
+  max-width: 10ch;
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  line-height: 1.02;
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    min-height: auto;
+  }
+
+  .stat-card {
+    min-height: 100px;
+  }
 }

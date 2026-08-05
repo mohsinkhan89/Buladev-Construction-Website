@@ -245,41 +245,25 @@ export default function HomePage() {
       </section>
 
       <section className="px-4 pb-12 sm:px-6 lg:px-8" id="contact">
-        <div className="cta-band modern-cta mx-auto max-w-7xl text-white">
-          <div className="modern-cta-accent" aria-hidden="true" />
-          <div className="modern-cta-content">
-            <span className="modern-cta-eyebrow">Free project consultation</span>
-            <h2 className="mt-4 text-3xl font-black uppercase leading-tight tracking-wide sm:text-4xl">
-              Ready to Start Your Project?
-            </h2>
-            <p className="mt-3 max-w-2xl text-sm font-semibold leading-6 text-zinc-300">
-              Let&apos;s turn your ideas into a clear plan, tight timeline, and build-ready next step.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3 text-xs font-black uppercase text-white">
-              {["Licensed & Insured", "20+ Years", "Lean Six Sigma"].map((item) => (
-                <span className="modern-cta-chip" key={item}>{item}</span>
-              ))}
-            </div>
+        <div className="cta-band image-match-cta mx-auto max-w-7xl text-white">
+          <div className="image-match-cta-copy">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let&apos;s turn your ideas into reality with a team you can rely on.</p>
           </div>
 
-          <div className="modern-cta-contact">
-            <a className="flex items-center gap-3 rounded-md px-1 py-2 text-xl font-black" href="tel:3134449734">
-              <span className="phone-pulse modern-cta-phone-icon">
-                <Phone className="h-6 w-6" />
+          <div className="image-match-cta-actions">
+            <a className="image-match-cta-phone" href="tel:3134449734">
+              <span className="image-match-cta-phone-icon">
+                <Phone className="h-5 w-5" />
               </span>
               (313) 444-9734
             </a>
-            <a
-              className="magnetic-btn mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-ember px-6 text-xs font-black uppercase tracking-tight text-white shadow-orange-glow"
-              href="mailto:bula@buladev.com"
-            >
-              <Mail className="h-4 w-4" />
+            <a className="image-match-cta-button magnetic-btn" href="mailto:bula@buladev.com">
               Request Consultation
             </a>
           </div>
         </div>
       </section>
-
       <footer className="footer modern-footer">
         <div className="modern-footer-line" aria-hidden="true" />
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.3fr_0.8fr_0.9fr_1fr] lg:px-8">
