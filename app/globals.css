@@ -2199,7 +2199,6 @@ html {
 
 .stat-value,
 .stat-label {
-  max-width: 10ch;
   margin-inline: auto;
   color: #ffffff;
   font-weight: 600;
@@ -2227,13 +2226,11 @@ html {
 
 .stat-card:nth-child(1) .stat-label,
 .stat-card:nth-child(2) .stat-label {
-  max-width: 8.6ch;
   font-size: clamp(0.62rem, 0.8vw, 0.72rem);
   line-height: 1.02;
 }
 
 .stat-card:nth-child(3) .stat-value {
-  max-width: 8.2ch;
   font-size: clamp(1.05rem, 1.45vw, 1.42rem);
   line-height: 1.02;
 }
@@ -2247,7 +2244,6 @@ html {
 
 .stat-card:nth-child(4) .stat-value,
 .stat-card:nth-child(5) .stat-value {
-  max-width: 10ch;
   font-size: clamp(1.05rem, 1.4vw, 1.35rem);
   line-height: 1.02;
 }
@@ -2468,8 +2464,13 @@ html {
 }
 
 .modern-filter-button {
-  min-height: 2.7rem;
-  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 2.2rem;
+  border-radius: 7px;
   padding: 0.42rem 0.82rem 0.42rem 0.54rem;
   border: 1px solid rgba(15, 23, 42, 0.1);
   font-weight: 800;
@@ -2665,7 +2666,7 @@ html {
 }
 
 .image-match-footer-copy {
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  border-top: 1px solid rgb(242 107 19 / 50%);
   padding-top: 1.15rem;
   padding-bottom: 1.15rem;
   text-align: center;

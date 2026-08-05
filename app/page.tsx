@@ -89,6 +89,13 @@ function LogoBlock() {
     </a>
   );
 }
+function LogoWhite() {
+  return (
+    <a className="logo-block" href="#home" aria-label="BULADEV home">
+      <img className="logo-image" src="./img/logo/logo.png" alt="BULADEV Building & Land Development" />
+    </a>
+  );
+}
 
 
 function ButtonLordIcon({ src, light = true }: { src: string; light?: boolean }) {
@@ -135,7 +142,7 @@ export default function HomePage() {
 
           <header className="site-header" data-sticky-header>
             <div className="flex items-center gap-5">
-              <LogoBlock />
+              <LogoWhite />
             </div>
 
             <nav className="hidden items-center gap-5 lg:flex">
