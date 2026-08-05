@@ -1,15 +1,14 @@
 ﻿import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
 import ScrollReveal from "./ScrollReveal";
+import ProjectGallery from "./ProjectGallery";
 import {
-  ArrowRight,
   Award,
   CheckCircle2,
   ClipboardCheck,
   Mail,
   MapPin,
   Phone,
-  PlayCircle,
   ShieldCheck,
   UsersRound,
 } from "lucide-react";
@@ -95,6 +94,16 @@ function LogoBlock() {
 }
 
 
+function ButtonLordIcon({ src, light = true }: { src: string; light?: boolean }) {
+  return createElement("lord-icon", {
+    src,
+    trigger: "loop-on-hover",
+    delay: "120",
+    colors: light ? "primary:#ffffff,secondary:#fed7aa" : "primary:#071018,secondary:#f57216",
+    className: "button-lord-icon",
+    style: { width: "20px", height: "20px" } as CSSProperties,
+  });
+}
 function LordIcon({ src, size = 56 }: { src: string; size?: number }) {
   return createElement("lord-icon", {
     src,
@@ -140,8 +149,9 @@ export default function HomePage() {
               ))}
             </nav>
 
-            <a className="header-cta magnetic-btn" href="#contact">
-              Request Consultation
+            <a className="header-cta modern-action-btn magnetic-btn" href="#contact">
+              <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
+              <span>Request Consultation</span>
             </a>
           </header>
 
@@ -170,11 +180,11 @@ export default function HomePage() {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <a className="primary-btn magnetic-btn" href="#contact">Get Started</a>
-                <a className="secondary-btn magnetic-btn" href="#services">Explore Services</a>
-                <a className="watch-link" href="#projects">
-                  <span className="play-orbit"><PlayCircle className="h-5 w-5" /></span>
-                  Watch Video
+                <a className="primary-btn modern-action-btn magnetic-btn" href="#contact"><ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" /><span>Get Started</span></a>
+                <a className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="#services"><ButtonLordIcon src="https://cdn.lordicon.com/cnpvyndp.json" light={false} /><span>Explore Services</span></a>
+                <a className="watch-link modern-watch-link" href="#projects">
+                  <span className="play-orbit"><ButtonLordIcon src="https://cdn.lordicon.com/slduhdil.json" /></span>
+                  <span>Watch Video</span>
                 </a>
               </div>
             </div>
@@ -216,33 +226,7 @@ export default function HomePage() {
             <h2>Featured Projects</h2>
           </div>
 
-          <div className="filter-row">
-            {["All", "Residential", "Commercial", "Land Development", "Retail"].map((filter, index) => (
-              <button className={index === 0 ? "filter-active" : "filter-button"} key={filter}>{filter}</button>
-            ))}
-          </div>
-
-          <div className="project-grid">
-            {projects.map((project) => (
-              <article className="project-card" key={project.title}>
-                <div className="project-image-wrap">
-                  <div className="project-image" style={{ backgroundImage: `url("${project.image}")` }} />
-                  <span className="project-badge">Featured</span>
-                </div>
-                <div className="project-body p-4">
-                  <h3>{project.title}</h3>
-                  <p>{project.category}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <a className="outline-button magnetic-btn" href="#projects">
-              View All Projects
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
+          <ProjectGallery projects={projects} />
         </div>
       </section>
 
@@ -260,8 +244,9 @@ export default function HomePage() {
               </span>
               (313) 444-9734
             </a>
-            <a className="image-match-cta-button magnetic-btn" href="mailto:bula@buladev.com">
-              Request Consultation
+            <a className="image-match-cta-button modern-action-btn magnetic-btn" href="mailto:bula@buladev.com">
+              <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
+              <span>Request Consultation</span>
             </a>
           </div>
         </div>
