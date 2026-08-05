@@ -2134,6 +2134,26 @@ html {
   }
 }
 /* Screenshot-style stats cards */
+@keyframes statCardRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes statBorderPulse {
+  0%, 100% {
+    box-shadow: inset 0 0 0 1px rgba(245, 114, 22, 0.08), 0 0 18px rgba(245, 114, 22, 0.05);
+  }
+  50% {
+    box-shadow: inset 0 0 0 1px rgba(245, 114, 22, 0.18), 0 0 28px rgba(245, 114, 22, 0.14);
+  }
+}
+
 .stats-grid {
   width: 100%;
   min-height: 104px;
@@ -2148,17 +2168,33 @@ html {
   padding: 0.95rem 1rem;
   align-content: center;
   gap: 0.15rem;
+  animation: statCardRise 520ms ease both;
 }
+
+.stat-card:nth-child(2) { animation-delay: 80ms; }
+.stat-card:nth-child(3) { animation-delay: 160ms; }
+.stat-card:nth-child(4) { animation-delay: 240ms; }
+.stat-card:nth-child(5) { animation-delay: 320ms; }
 
 .stat-card::before {
   inset: 14px 15px;
   border-color: rgba(245, 114, 22, 0.5);
   opacity: 0.72;
+  animation: statBorderPulse 3.4s ease-in-out infinite;
 }
 
-.stat-card::before {
+.stat-card:first-child::before {
   border-color: rgba(245, 114, 22, 0.12);
   opacity: 0.2;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card:hover::before {
+  border-color: rgba(245, 114, 22, 0.95);
+  opacity: 1;
 }
 
 .stat-value,
@@ -2166,7 +2202,7 @@ html {
   max-width: 10ch;
   margin-inline: auto;
   color: #ffffff;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: 0;
   text-transform: uppercase;
   text-shadow: 0 7px 16px rgba(0, 0, 0, 0.72);
@@ -2214,6 +2250,10 @@ html {
   max-width: 10ch;
   font-size: clamp(1.05rem, 1.4vw, 1.35rem);
   line-height: 1.02;
+}
+
+.image-match-cta {
+  padding: 3.05rem 1.45rem;
 }
 
 @media (max-width: 640px) {
