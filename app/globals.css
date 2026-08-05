@@ -3299,7 +3299,7 @@ h3,
   .image-match-cta-button {
     flex: 1 1 100%;
   }
-  .gap-2 {
+  .gap-3 {
     gap: 0.5rem;
   }
   .mobile-menu-cta.modern-action-btn {
@@ -3421,6 +3421,12 @@ h3,
   .stat-card:nth-child(4) .stat-label,
   .stat-card:nth-child(5) .stat-label {
     font-size: clamp(0.82rem, 4vw, 1.02rem);
+  }
+  .hero-title {
+    font-size: clamp(2.3rem, 15vw, 3.0rem);
+  }
+  .hero-title span {
+    font-size: 5.0rem;
   }
 }
 
