@@ -107,7 +107,7 @@ export default function HomePage() {
   return (
     <main className="site-canvas min-h-screen text-coal">
       <section className="hero-shell">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
+        <div className="hero-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="top-strip">
             <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
               {topBadges.map(({ label, icon: Icon }) => (
