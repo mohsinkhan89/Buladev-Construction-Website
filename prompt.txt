@@ -1,0 +1,5 @@
+reference prompt 001:
+    Enhance styles for stats grid and stat cards; add text shadows for improved readability
+
+reference prompt 002:
+    Add new styles and structure to enhance layout and design elements
