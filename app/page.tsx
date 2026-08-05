@@ -1,5 +1,6 @@
 ﻿import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
+import ScrollReveal from "./ScrollReveal";
 import {
   ArrowRight,
   Award,
@@ -108,6 +109,7 @@ export default function HomePage() {
   return (
     <main className="site-canvas min-h-screen text-coal">
       <StickyHeaderState />
+      <ScrollReveal />
       <section className="hero-shell">
         <div className="hero-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="top-strip">
