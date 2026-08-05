@@ -58,20 +58,6 @@ const stats = [
   { value: "Professional", label: "Project Managers" },
 ];
 
-const stickyHeaderStyle: CSSProperties = {
-  position: "fixed",
-  top: "2.85rem",
-  left: "50%",
-  width: "min(calc(100% - 2rem), 80rem)",
-  marginTop: 0,
-  transform: "translateX(-50%)",
-  zIndex: 1000,
-  background: "linear-gradient(135deg, rgba(8, 17, 26, 0.72), rgba(8, 17, 26, 0.38))",
-  borderColor: "rgba(255, 255, 255, 0.10)",
-  backdropFilter: "blur(12px)",
-  transition: "top 280ms ease, background 280ms ease, box-shadow 280ms ease, border-color 280ms ease, backdrop-filter 280ms ease",
-  willChange: "top, background, box-shadow",
-};
 const projects = [
   {
     title: "Modern Luxury Home",
@@ -139,7 +125,7 @@ export default function HomePage() {
             </a>
           </div>
 
-          <header className="site-header" data-sticky-header style={stickyHeaderStyle}>
+          <header className="site-header" data-sticky-header>
             <div className="flex items-center gap-5">
               <LogoBlock />
             </div>
@@ -157,7 +143,7 @@ export default function HomePage() {
             </a>
           </header>
 
-          <div className="hero-grid" style={{ paddingTop: "5.4rem" }}>
+          <div className="hero-grid">
             <div className="relative z-10 max-w-5xl py-14 sm:py-20 lg:py-[5.6rem]">
               <h1 className="hero-title">
                 Building
@@ -259,28 +245,52 @@ export default function HomePage() {
       </section>
 
       <section className="px-4 pb-12 sm:px-6 lg:px-8" id="contact">
-        <div className="cta-band mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 rounded-lg bg-coal px-6 py-7 text-white shadow-xl ring-1 ring-white/10 md:flex-row md:items-center">
-          <div>
-            <h2 className="text-2xl font-black uppercase tracking-wide">Ready to Start Your Project?</h2>
-            <p className="mt-1 text-sm font-medium text-zinc-300">Let&apos;s turn your ideas into reality with a team you can rely on.</p>
+        <div className="cta-band modern-cta mx-auto max-w-7xl text-white">
+          <div className="modern-cta-accent" aria-hidden="true" />
+          <div className="modern-cta-content">
+            <span className="modern-cta-eyebrow">Free project consultation</span>
+            <h2 className="mt-4 text-3xl font-black uppercase leading-tight tracking-wide sm:text-4xl">
+              Ready to Start Your Project?
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm font-semibold leading-6 text-zinc-300">
+              Let&apos;s turn your ideas into a clear plan, tight timeline, and build-ready next step.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3 text-xs font-black uppercase text-white">
+              {["Licensed & Insured", "20+ Years", "Lean Six Sigma"].map((item) => (
+                <span className="modern-cta-chip" key={item}>{item}</span>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-5">
-            <a className="flex items-center gap-2 text-lg font-black" href="tel:3134449734">
-              <span className="phone-pulse"><Phone className="h-7 w-7 text-ember" /></span>
+
+          <div className="modern-cta-contact">
+            <a className="flex items-center gap-3 rounded-md px-1 py-2 text-xl font-black" href="tel:3134449734">
+              <span className="phone-pulse modern-cta-phone-icon">
+                <Phone className="h-6 w-6" />
+              </span>
               (313) 444-9734
             </a>
-            <a className="primary-btn magnetic-btn" href="mailto:bula@buladev.com">Request Consultation</a>
+            <a
+              className="magnetic-btn mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-ember px-6 text-xs font-black uppercase tracking-tight text-white shadow-orange-glow"
+              href="mailto:bula@buladev.com"
+            >
+              <Mail className="h-4 w-4" />
+              Request Consultation
+            </a>
           </div>
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 md:grid-cols-[1.3fr_0.8fr_0.9fr_1fr] lg:px-8">
+      <footer className="footer modern-footer">
+        <div className="modern-footer-line" aria-hidden="true" />
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.3fr_0.8fr_0.9fr_1fr] lg:px-8">
           <div>
             <div className="flex flex-wrap items-center gap-5">
               <LogoBlock />
             </div>
-            <div className="mt-8 flex gap-5 text-lg font-black">
+            <p className="mt-5 max-w-xs text-sm font-semibold leading-6 text-zinc-400">
+              Building & land development support for residential, commercial, and project-managed work.
+            </p>
+            <div className="mt-7 flex gap-3 text-sm font-black">
               <a className="social-link" href="#" aria-label="Facebook">f</a>
               <a className="social-link" href="#" aria-label="LinkedIn">in</a>
               <a className="social-link" href="#" aria-label="Instagram">ig</a>
@@ -292,15 +302,15 @@ export default function HomePage() {
 
           <div>
             <h3 className="footer-title">Contact Info</h3>
-            <ul className="space-y-3 text-sm font-semibold text-zinc-600">
-              <li className="flex gap-3"><Phone className="h-4 w-4 text-coal" />(313) 444-9734</li>
-              <li className="flex gap-3"><Mail className="h-4 w-4 text-coal" />bula@buladev.com</li>
-              <li className="flex gap-3"><MapPin className="h-4 w-4 text-coal" />Detroit, Michigan</li>
-              <li className="flex gap-3"><UsersRound className="h-4 w-4 text-coal" />Licensed & Insured</li>
+            <ul className="space-y-3 text-sm font-semibold text-zinc-300">
+              <li className="flex gap-3"><Phone className="h-4 w-4 text-ember" />(313) 444-9734</li>
+              <li className="flex gap-3"><Mail className="h-4 w-4 text-ember" />bula@buladev.com</li>
+              <li className="flex gap-3"><MapPin className="h-4 w-4 text-ember" />Detroit, Michigan</li>
+              <li className="flex gap-3"><UsersRound className="h-4 w-4 text-ember" />Licensed & Insured</li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-zinc-200 py-4 text-center text-xs font-semibold text-zinc-500">
+        <div className="border-t border-white/10 py-5 text-center text-xs font-semibold text-zinc-500">
           © 2025 BULADEV Building & Land Development + ASA Construction LLC. All Rights Reserved.
         </div>
       </footer>
@@ -312,7 +322,7 @@ function FooterList({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
       <h3 className="footer-title">{title}</h3>
-      <ul className="space-y-2 text-sm font-semibold text-zinc-600">
+      <ul className="space-y-2 text-sm font-semibold text-zinc-400">
         {items.map((item) => (
           <li key={item}><a href="#">{item}</a></li>
         ))}
