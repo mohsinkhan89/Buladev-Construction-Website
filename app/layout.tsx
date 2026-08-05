@@ -15,6 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         {children}
         <Script src="https://cdn.lordicon.com/lordicon.js" strategy="afterInteractive" />

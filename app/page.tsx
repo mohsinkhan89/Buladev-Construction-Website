@@ -6,11 +6,8 @@ import {
   Award,
   CheckCircle2,
   ClipboardCheck,
-  Mail,
-  MapPin,
   Phone,
   ShieldCheck,
-  UsersRound,
 } from "lucide-react";
 
 const navItems = ["Home", "About", "Services", "Projects", "Process", "Testimonials", "Contact"];
@@ -88,7 +85,7 @@ const projects = [
 function LogoBlock() {
   return (
     <a className="logo-block" href="#home" aria-label="BULADEV home">
-      <img className="logo-image" src="/img/logo/logo.png" alt="BULADEV Building & Land Development" />
+      <img className="logo-image" src="./img/logo/logo-black.png" alt="BULADEV Building & Land Development" />
     </a>
   );
 }
@@ -251,20 +248,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <footer className="footer modern-footer">
-        <div className="modern-footer-line" aria-hidden="true" />
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.3fr_0.8fr_0.9fr_1fr] lg:px-8">
-          <div>
-            <div className="flex flex-wrap items-center gap-5">
+      <footer className="footer image-match-footer">
+        <div className="image-match-footer-inner mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 lg:px-8">
+          <div className="image-match-footer-brand">
+            <div className="image-match-footer-logos">
               <LogoBlock />
             </div>
-            <p className="mt-5 max-w-xs text-sm font-semibold leading-6 text-zinc-400">
-              Building & land development support for residential, commercial, and project-managed work.
-            </p>
-            <div className="mt-7 flex gap-3 text-sm font-black">
-              <a className="social-link" href="#" aria-label="Facebook">f</a>
-              <a className="social-link" href="#" aria-label="LinkedIn">in</a>
-              <a className="social-link" href="#" aria-label="Instagram">ig</a>
+
+            <div className="image-match-socials" aria-label="Social media links">
+              <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f" /></a>
+              <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in" /></a>
+              <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram" /></a>
             </div>
           </div>
 
@@ -273,16 +267,16 @@ export default function HomePage() {
 
           <div>
             <h3 className="footer-title">Contact Info</h3>
-            <ul className="space-y-3 text-sm font-semibold text-zinc-300">
-              <li className="flex gap-3"><Phone className="h-4 w-4 text-ember" />(313) 444-9734</li>
-              <li className="flex gap-3"><Mail className="h-4 w-4 text-ember" />bula@buladev.com</li>
-              <li className="flex gap-3"><MapPin className="h-4 w-4 text-ember" />Detroit, Michigan</li>
-              <li className="flex gap-3"><UsersRound className="h-4 w-4 text-ember" />Licensed & Insured</li>
+            <ul className="image-match-contact-list">
+              <li><i className="fa-solid fa-phone" /><a href="tel:3134449734">(313) 444-9734</a></li>
+              <li><i className="fa-solid fa-envelope" /><a href="mailto:bula@buladev.com">bula@BULADEV.com</a></li>
+              <li><i className="fa-solid fa-location-dot" /><span>Detroit, Michigan</span></li>
+              <li><i className="fa-regular fa-id-card" /><span>Licensed & Insured</span></li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-white/10 py-5 text-center text-xs font-semibold text-zinc-500">
-          © 2025 BULADEV Building & Land Development + ASA Construction LLC. All Rights Reserved.
+        <div className="image-match-footer-copy mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p>© 2025 BULADEV Building & Land Development + ASA Construction LLC. All Rights Reserved.</p>
         </div>
       </footer>
     </main>
@@ -293,7 +287,7 @@ function FooterList({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
       <h3 className="footer-title">{title}</h3>
-      <ul className="space-y-2 text-sm font-semibold text-zinc-400">
+      <ul className="image-match-footer-links">
         {items.map((item) => (
           <li key={item}><a href="#">{item}</a></li>
         ))}
