@@ -3270,6 +3270,25 @@ h3,
 }
 
 @media (max-width: 510px) {
+  .image-match-footer .logo-block {
+    width: 250px;
+  }
+  .image-match-socials {
+    position: relative;
+    left: 0px;
+  }
+  .services-section {
+    padding-bottom: 0rem;
+  }
+  .image-match-cta-phone {
+    justify-content: center;
+  }
+  .image-match-cta {
+    text-align: center;
+  }
+  .image-match-cta-button {
+    flex: 1 1 100%;
+  }
   .gap-2 {
     gap: 0.5rem;
   }
