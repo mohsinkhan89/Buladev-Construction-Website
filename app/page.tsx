@@ -1,4 +1,5 @@
 ﻿import { createElement, type CSSProperties } from "react";
+import StickyHeaderState from "./StickyHeaderState";
 import {
   ArrowRight,
   Award,
@@ -57,6 +58,20 @@ const stats = [
   { value: "Professional", label: "Project Managers" },
 ];
 
+const stickyHeaderStyle: CSSProperties = {
+  position: "fixed",
+  top: "2.85rem",
+  left: "50%",
+  width: "min(calc(100% - 2rem), 80rem)",
+  marginTop: 0,
+  transform: "translateX(-50%)",
+  zIndex: 1000,
+  background: "linear-gradient(135deg, rgba(8, 17, 26, 0.72), rgba(8, 17, 26, 0.38))",
+  borderColor: "rgba(255, 255, 255, 0.10)",
+  backdropFilter: "blur(12px)",
+  transition: "top 280ms ease, background 280ms ease, box-shadow 280ms ease, border-color 280ms ease, backdrop-filter 280ms ease",
+  willChange: "top, background, box-shadow",
+};
 const projects = [
   {
     title: "Modern Luxury Home",
@@ -106,6 +121,7 @@ function LordIcon({ src, size = 56 }: { src: string; size?: number }) {
 export default function HomePage() {
   return (
     <main className="site-canvas min-h-screen text-coal">
+      <StickyHeaderState />
       <section className="hero-shell">
         <div className="hero-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="top-strip">
@@ -123,7 +139,7 @@ export default function HomePage() {
             </a>
           </div>
 
-          <header className="site-header">
+          <header className="site-header" data-sticky-header style={stickyHeaderStyle}>
             <div className="flex items-center gap-5">
               <LogoBlock />
             </div>
@@ -141,7 +157,7 @@ export default function HomePage() {
             </a>
           </header>
 
-          <div className="hero-grid">
+          <div className="hero-grid" style={{ paddingTop: "5.4rem" }}>
             <div className="relative z-10 max-w-5xl py-14 sm:py-20 lg:py-[5.6rem]">
               <h1 className="hero-title">
                 Building
