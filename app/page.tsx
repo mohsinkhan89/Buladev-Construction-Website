@@ -157,6 +157,24 @@ export default function HomePage() {
               <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
               <span>Request Consultation</span>
             </a>
+            <input className="mobile-menu-check" id="mobile-menu-toggle" type="checkbox" />
+            <label className="mobile-menu-button" htmlFor="mobile-menu-toggle" aria-label="Open menu">
+              <span />
+              <span />
+              <span />
+            </label>
+
+            <div className="mobile-menu-panel">
+              <nav className="mobile-menu-nav" aria-label="Mobile navigation">
+                {navItems.map((item) => (
+                  <a href={`#${item.toLowerCase()}`} key={item}>{item}</a>
+                ))}
+              </nav>
+              <a className="mobile-menu-cta modern-action-btn magnetic-btn" href="#contact">
+                <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
+                <span>Request Consultation</span>
+              </a>
+            </div>
           </header>
 
           <div className="hero-grid">
