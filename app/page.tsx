@@ -185,7 +185,7 @@ export default function HomePage() {
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
                 <a className="primary-btn modern-action-btn magnetic-btn" href="#contact"><ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" /><span>Get Started</span></a>
-                <a className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="#services"><ButtonLordIcon src="https://cdn.lordicon.com/cnpvyndp.json" light={false} /><span>Explore Services</span></a>
+                <a className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="#services"><ButtonLordIcon src="https://cdn.lordicon.com/cnpvyndp.json" /><span>Explore Services</span></a>
                 <a className="watch-link modern-watch-link" href="#projects">
                   <span className="play-orbit"><ButtonLordIcon src="https://cdn.lordicon.com/slduhdil.json" /></span>
                   <span>Watch Video</span>
