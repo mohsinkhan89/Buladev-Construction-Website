@@ -110,45 +110,46 @@ export default function HomePage() {
     <main className="site-canvas min-h-screen text-coal">
       <StickyHeaderState />
       <ScrollReveal />
-      <section className="hero-shell">
-        <div className="hero-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
-          <header className="site-header" data-sticky-header>
-            <div className="flex items-center gap-5">
-              <LogoWhite />
-            </div>
+      <header className="site-header" data-sticky-header>
+        <div className="site-header-inner">
+          <div className="flex items-center gap-5">
+            <LogoWhite />
+          </div>
 
-            <nav className="hidden items-center gap-5 lg:flex">
+          <nav className="hidden items-center gap-5 lg:flex">
+            {navItems.map((item) => (
+              <a className={`nav-link ${item === "Home" ? "active" : ""}`} href={`#${item.toLowerCase()}`} key={item}>
+                {item}
+              </a>
+            ))}
+          </nav>
+
+          <a className="header-cta modern-action-btn magnetic-btn" href="#contact">
+            <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
+            <span>Request Consultation</span>
+          </a>
+          <input className="mobile-menu-check" id="mobile-menu-toggle" type="checkbox" />
+          <label className="mobile-menu-button" htmlFor="mobile-menu-toggle" aria-label="Open menu">
+            <span />
+            <span />
+            <span />
+          </label>
+
+          <div className="mobile-menu-panel">
+            <nav className="mobile-menu-nav" aria-label="Mobile navigation">
               {navItems.map((item) => (
-                <a className={`nav-link ${item === "Home" ? "active" : ""}`} href={`#${item.toLowerCase()}`} key={item}>
-                  {item}
-                </a>
+                <a href={`#${item.toLowerCase()}`} key={item}>{item}</a>
               ))}
             </nav>
-
-            <a className="header-cta modern-action-btn magnetic-btn" href="#contact">
+            <a className="mobile-menu-cta modern-action-btn magnetic-btn" href="#contact">
               <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
               <span>Request Consultation</span>
             </a>
-            <input className="mobile-menu-check" id="mobile-menu-toggle" type="checkbox" />
-            <label className="mobile-menu-button" htmlFor="mobile-menu-toggle" aria-label="Open menu">
-              <span />
-              <span />
-              <span />
-            </label>
-
-            <div className="mobile-menu-panel">
-              <nav className="mobile-menu-nav" aria-label="Mobile navigation">
-                {navItems.map((item) => (
-                  <a href={`#${item.toLowerCase()}`} key={item}>{item}</a>
-                ))}
-              </nav>
-              <a className="mobile-menu-cta modern-action-btn magnetic-btn" href="#contact">
-                <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
-                <span>Request Consultation</span>
-              </a>
-            </div>
-          </header>
-
+          </div>
+        </div>
+      </header>
+      <section className="hero-shell">
+        <div className="hero-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="hero-grid">
             <div className="relative z-10 max-w-5xl py-14 sm:py-20 lg:py-[5.6rem]">
               <h1 className="hero-title">

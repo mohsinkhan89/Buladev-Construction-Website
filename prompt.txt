@@ -6,3 +6,6 @@ reference prompt 002:
 
 reference prompt 003:
     refactor: remove unused top badges and clean up imports for improved code clarity
+
+reference prompt 004:
+    feat: implement full-width fixed header and improve mobile navigation structure
