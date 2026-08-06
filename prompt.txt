@@ -30,3 +30,6 @@ reference prompt 008:
     - Updated Tailwind CSS configuration to include new font families.
     - Added MySQL as a dependency for database interactions.
     - Created database schema for users table.
+
+reference prompt 009:
+    Implement bid list submission feature with form handling and database integration

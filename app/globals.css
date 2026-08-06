@@ -4013,3 +4013,64 @@ h3,
     top: auto;
   }
 }
+
+/* Bid List typography and database submit states */
+.bid-list-copy h2,
+.contact-cards-content h2 {
+  max-width: 34rem;
+  font-size: clamp(1.75rem, 3.2vw, 2.65rem) !important;
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.bid-list-copy p,
+.contact-cards-content p {
+  max-width: 34rem;
+  color: #e4e4e7;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: clamp(0.86rem, 1vw, 0.98rem) !important;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.bid-list-kicker {
+  font-size: clamp(0.72rem, 0.86vw, 0.82rem) !important;
+}
+
+.bid-list-submit-message {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  padding: 0.78rem 0.85rem;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.bid-list-submit-message.is-success {
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+}
+
+.bid-list-submit-message.is-error {
+  border: 1px solid rgba(239, 68, 68, 0.28);
+  background: rgba(239, 68, 68, 0.1);
+  color: #b91c1c;
+}
+
+.bid-list-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+@media (max-width: 767px) {
+  .bid-list-copy h2,
+  .contact-cards-content h2 {
+    font-size: clamp(1.65rem, 8vw, 2.05rem) !important;
+  }
+}

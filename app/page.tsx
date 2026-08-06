@@ -1,8 +1,9 @@
-﻿import { createElement, type CSSProperties } from "react";
+import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
 import ScrollReveal from "./ScrollReveal";
 import ProjectGallery from "./ProjectGallery";
-import { Building2, CheckCircle2, ClipboardCheck, FileText, Mail, MapPin, Phone } from "lucide-react";
+import BidListForm from "./BidListForm";
+import { CheckCircle2, ClipboardCheck, FileText, MapPin, Phone } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -272,88 +273,7 @@ export default function HomePage() {
 
             </div>
 
-            <form className="bid-list-form" action="mailto:bula@buladev.com" method="post" encType="text/plain">
-              <div className="bid-list-form-heading">
-                <Building2 className="h-6 w-6" />
-                <div>
-                  <h3>Company Information</h3>
-                  <p>Required fields are marked with an asterisk.</p>
-                </div>
-              </div>
-
-              <div className="bid-list-form-grid">
-                <label className="bid-list-field">
-                  <span>Company Name *</span>
-                  <input name="Company Name" placeholder="Your company" required type="text" />
-                </label>
-
-                <label className="bid-list-field">
-                  <span>Contact Name *</span>
-                  <input name="Contact Name" placeholder="Primary contact" required type="text" />
-                </label>
-
-                <label className="bid-list-field">
-                  <span>Email Address *</span>
-                  <input name="Email Address" placeholder="name@company.com" required type="email" />
-                </label>
-
-                <label className="bid-list-field">
-                  <span>Phone Number *</span>
-                  <input name="Phone Number" placeholder="(000) 000-0000" required type="tel" />
-                </label>
-
-                <label className="bid-list-field">
-                  <span>Company Type *</span>
-                  <select name="Company Type" required defaultValue="">
-                    <option value="" disabled>Select one</option>
-                    <option>Subcontractor</option>
-                    <option>Supplier</option>
-                    <option>Consultant</option>
-                    <option>Service Provider</option>
-                  </select>
-                </label>
-
-                <label className="bid-list-field">
-                  <span>Primary Trade *</span>
-                  <input name="Primary Trade" placeholder="Concrete, electrical, framing..." required type="text" />
-                </label>
-
-                <label className="bid-list-field bid-list-field-wide">
-                  <span>Services / Scopes of Work *</span>
-                  <textarea
-                    name="Services and Scopes"
-                    placeholder="Tell us what scopes your team covers."
-                    required
-                    rows={4}
-                  />
-                </label>
-
-                <label className="bid-list-field">
-                  <span>Service Area</span>
-                  <input name="Service Area" placeholder="Detroit, Southeast Michigan..." type="text" />
-                </label>
-
-                <label className="bid-list-field">
-                  <span>License / Certification</span>
-                  <input name="License or Certification" placeholder="License number or certification" type="text" />
-                </label>
-              </div>
-
-              <label className="bid-list-checkbox">
-                <input name="Insurance Confirmation" type="checkbox" value="Yes" />
-                <span>We can provide current insurance, W-9, and compliance documents upon request.</span>
-              </label>
-
-              <button className="bid-list-submit modern-action-btn magnetic-btn" type="submit">
-                <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
-                <span>Submit Bid List Request</span>
-              </button>
-
-              <p className="bid-list-note">
-                <Mail className="h-4 w-4" />
-                This form opens an email to bula@BULADEV.com with your submission details.
-              </p>
-            </form>
+            <BidListForm />
           </div>
         </div>
       </section>
