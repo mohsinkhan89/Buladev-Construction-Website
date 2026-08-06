@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+﻿import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -17,7 +17,9 @@ const config: Config = {
         "orange-glow": "0 18px 40px rgba(245, 114, 22, 0.22)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Arial", "sans-serif"],
+        sans: ["Montserrat", "Arial", "sans-serif"],
+        montserrat: ["Montserrat", "Arial", "sans-serif"],
+        rajdhani: ["Rajdhani", "Montserrat", "Arial", "sans-serif"],
       },
     },
   },
@@ -25,3 +27,4 @@ const config: Config = {
 };
 
 export default config;
+

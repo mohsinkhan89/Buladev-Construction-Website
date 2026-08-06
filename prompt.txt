@@ -18,3 +18,15 @@ reference prompt 006:
 
 reference prompt 007:
     Add sticky contact cards and update bid list section styles for improved layout
+
+reference prompt 008:
+    feat: implement user authentication with login and logout routes
+
+    - Added login and logout API routes for user authentication.
+    - Created a dashboard page that redirects to login if the user is not authenticated.
+    - Implemented session management using cookies and MySQL for user verification.
+    - Added a login form component for user input.
+    - Created a script to initialize an admin user in the database.
+    - Updated Tailwind CSS configuration to include new font families.
+    - Added MySQL as a dependency for database interactions.
+    - Created database schema for users table.
