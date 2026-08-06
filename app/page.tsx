@@ -2,9 +2,18 @@ import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
 import ScrollReveal from "./ScrollReveal";
 import ProjectGallery from "./ProjectGallery";
-import { Phone } from "lucide-react";
+import { Building2, CheckCircle2, ClipboardCheck, FileText, Mail, MapPin, Phone } from "lucide-react";
 
-const navItems = ["Home", "About", "Services", "Projects", "Process", "Testimonials", "Contact"];
+const navItems = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Process", href: "#process" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Bid List", href: "#bid-list", featured: true },
+  { label: "Contact", href: "#contact" },
+];
 
 const services = [
   {
@@ -118,8 +127,12 @@ export default function HomePage() {
 
           <nav className="hidden items-center gap-5 lg:flex">
             {navItems.map((item) => (
-              <a className={`nav-link ${item === "Home" ? "active" : ""}`} href={`#${item.toLowerCase()}`} key={item}>
-                {item}
+              <a
+                className={`nav-link ${item.label === "Home" ? "active" : ""} ${item.featured ? "nav-link-bid" : ""}`}
+                href={item.href}
+                key={item.label}
+              >
+                {item.label}
               </a>
             ))}
           </nav>
@@ -138,7 +151,7 @@ export default function HomePage() {
           <div className="mobile-menu-panel">
             <nav className="mobile-menu-nav" aria-label="Mobile navigation">
               {navItems.map((item) => (
-                <a href={`#${item.toLowerCase()}`} key={item}>{item}</a>
+                <a href={item.href} key={item.label}>{item.label === "Bid List" ? "Join Our Bid List" : item.label}</a>
               ))}
             </nav>
             <a className="mobile-menu-cta modern-action-btn magnetic-btn" href="#contact">
@@ -148,7 +161,7 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-      <section className="hero-shell">
+      <section className="hero-shell" id="home">
         <div className="hero-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="hero-grid">
             <div className="relative z-10 max-w-5xl py-14 sm:py-20 lg:py-[5.6rem]">
@@ -225,6 +238,123 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      <section className="bid-list-section section-block" id="bid-list">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="bid-list-shell">
+            <div className="bid-list-copy">
+              <span className="bid-list-kicker">
+                <ClipboardCheck className="h-5 w-5" />
+                Subcontractor & Vendor Opportunities
+              </span>
+              <h2>Join Our Bid List</h2>
+              <p>
+                Partner with BULADEV on upcoming residential, commercial, and land development
+                projects. Share your company details and trade focus so our estimating team can
+                include you in the right bid invitations.
+              </p>
+
+              <div className="bid-list-benefits" aria-label="Bid list benefits">
+                <div>
+                  <CheckCircle2 className="h-5 w-5" />
+                  <span>Project-fit bid invites</span>
+                </div>
+                <div>
+                  <FileText className="h-5 w-5" />
+                  <span>Trade and scope matching</span>
+                </div>
+                <div>
+                  <MapPin className="h-5 w-5" />
+                  <span>Michigan-area opportunities</span>
+                </div>
+              </div>
+            </div>
+
+            <form className="bid-list-form" action="mailto:bula@buladev.com" method="post" encType="text/plain">
+              <div className="bid-list-form-heading">
+                <Building2 className="h-6 w-6" />
+                <div>
+                  <h3>Company Information</h3>
+                  <p>Required fields are marked with an asterisk.</p>
+                </div>
+              </div>
+
+              <div className="bid-list-form-grid">
+                <label className="bid-list-field">
+                  <span>Company Name *</span>
+                  <input name="Company Name" placeholder="Your company" required type="text" />
+                </label>
+
+                <label className="bid-list-field">
+                  <span>Contact Name *</span>
+                  <input name="Contact Name" placeholder="Primary contact" required type="text" />
+                </label>
+
+                <label className="bid-list-field">
+                  <span>Email Address *</span>
+                  <input name="Email Address" placeholder="name@company.com" required type="email" />
+                </label>
+
+                <label className="bid-list-field">
+                  <span>Phone Number *</span>
+                  <input name="Phone Number" placeholder="(000) 000-0000" required type="tel" />
+                </label>
+
+                <label className="bid-list-field">
+                  <span>Company Type *</span>
+                  <select name="Company Type" required defaultValue="">
+                    <option value="" disabled>Select one</option>
+                    <option>Subcontractor</option>
+                    <option>Supplier</option>
+                    <option>Consultant</option>
+                    <option>Service Provider</option>
+                  </select>
+                </label>
+
+                <label className="bid-list-field">
+                  <span>Primary Trade *</span>
+                  <input name="Primary Trade" placeholder="Concrete, electrical, framing..." required type="text" />
+                </label>
+
+                <label className="bid-list-field bid-list-field-wide">
+                  <span>Services / Scopes of Work *</span>
+                  <textarea
+                    name="Services and Scopes"
+                    placeholder="Tell us what scopes your team covers."
+                    required
+                    rows={4}
+                  />
+                </label>
+
+                <label className="bid-list-field">
+                  <span>Service Area</span>
+                  <input name="Service Area" placeholder="Detroit, Southeast Michigan..." type="text" />
+                </label>
+
+                <label className="bid-list-field">
+                  <span>License / Certification</span>
+                  <input name="License or Certification" placeholder="License number or certification" type="text" />
+                </label>
+              </div>
+
+              <label className="bid-list-checkbox">
+                <input name="Insurance Confirmation" type="checkbox" value="Yes" />
+                <span>We can provide current insurance, W-9, and compliance documents upon request.</span>
+              </label>
+
+              <button className="bid-list-submit modern-action-btn magnetic-btn" type="submit">
+                <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
+                <span>Submit Bid List Request</span>
+              </button>
+
+              <p className="bid-list-note">
+                <Mail className="h-4 w-4" />
+                This form opens an email to bula@BULADEV.com with your submission details.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
       <section className="px-4 pb-12 sm:px-6 lg:px-8" id="contact">
         <div className="cta-band image-match-cta mx-auto max-w-7xl text-white">
           <div className="image-match-cta-copy">
@@ -260,7 +390,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <FooterList title="Quick Links" items={["Home", "About Us", "Services", "Projects", "Our Process", "Contact"]} />
+          <FooterList title="Quick Links" items={["Home", "About Us", "Services", "Projects", "Join Our Bid List", "Our Process", "Contact"]} />
           <FooterList title="Services" items={["Residential Construction", "Commercial Construction", "Land Development", "Design & Build", "Project Management"]} />
 
           <div>
@@ -293,6 +423,7 @@ function FooterList({ title, items }: { title: string; items: string[] }) {
     </div>
   );
 }
+
 
 
 

@@ -9,3 +9,6 @@ reference prompt 003:
 
 reference prompt 004:
     feat: implement full-width fixed header and improve mobile navigation structure
+
+reference prompt 005:
+    feat: add Bid List section with form and navigation updates
