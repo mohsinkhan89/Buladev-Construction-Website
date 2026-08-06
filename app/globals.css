@@ -3939,3 +3939,77 @@ h3,
     font-size: 0.82rem;
   }
 }
+
+/* Sticky Bid List card and theme font alignment */
+.bid-list-section {
+  overflow: visible;
+}
+
+.bid-list-section,
+.bid-list-form,
+.bid-list-copy p,
+.bid-list-field input,
+.bid-list-field select,
+.bid-list-field textarea,
+.bid-list-note {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.bid-list-copy h2,
+.bid-list-kicker,
+.bid-list-benefits div,
+.bid-list-form-heading h3,
+.bid-list-form-heading p,
+.bid-list-field span,
+.bid-list-checkbox span,
+.bid-list-submit.modern-action-btn {
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+@media (min-width: 1181px) {
+  .contact-cards-content {
+    position: sticky;
+    top: 6.25rem;
+    align-self: start;
+  }
+}
+
+@media (max-width: 1180px) {
+  .contact-cards-content {
+    position: relative;
+    top: auto;
+  }
+}
+
+/* Keep the added contact card content sticky inside the Bid List column */
+.bid-list-copy {
+  overflow: visible;
+}
+
+.contact-cards-content {
+  position: relative;
+  z-index: 2;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.contact-cards-content h2,
+.contact-cards-content .bid-list-kicker {
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+@media (min-width: 1181px) {
+  .contact-cards-content {
+    position: sticky !important;
+    top: 6.25rem;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 1180px) {
+  .contact-cards-content {
+    position: relative !important;
+    top: auto;
+  }
+}

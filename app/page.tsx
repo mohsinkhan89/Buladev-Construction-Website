@@ -1,4 +1,4 @@
-import { createElement, type CSSProperties } from "react";
+﻿import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
 import ScrollReveal from "./ScrollReveal";
 import ProjectGallery from "./ProjectGallery";
@@ -243,31 +243,33 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="bid-list-shell">
             <div className="bid-list-copy">
-              <span className="bid-list-kicker">
-                <ClipboardCheck className="h-5 w-5" />
-                Subcontractor & Vendor Opportunities
-              </span>
-              <h2>Join Our Bid List</h2>
-              <p>
-                Partner with BULADEV on upcoming residential, commercial, and land development
-                projects. Share your company details and trade focus so our estimating team can
-                include you in the right bid invitations.
-              </p>
-
-              <div className="bid-list-benefits" aria-label="Bid list benefits">
-                <div>
-                  <CheckCircle2 className="h-5 w-5" />
-                  <span>Project-fit bid invites</span>
-                </div>
-                <div>
-                  <FileText className="h-5 w-5" />
-                  <span>Trade and scope matching</span>
-                </div>
-                <div>
-                  <MapPin className="h-5 w-5" />
-                  <span>Michigan-area opportunities</span>
+              <div className="contact-cards-content">
+                <span className="bid-list-kicker">
+                  <ClipboardCheck className="h-5 w-5" />
+                  Subcontractor & Vendor Opportunities
+                </span>
+                <h2>Join Our Bid List</h2>
+                <p>
+                  Partner with BULADEV on upcoming residential, commercial, and land development
+                  projects. Share your company details and trade focus so our estimating team can
+                  include you in the right bid invitations.
+                </p>
+                <div className="bid-list-benefits" aria-label="Bid list benefits">
+                  <div>
+                    <CheckCircle2 className="h-5 w-5" />
+                    <span>Project-fit bid invites</span>
+                  </div>
+                  <div>
+                    <FileText className="h-5 w-5" />
+                    <span>Trade and scope matching</span>
+                  </div>
+                  <div>
+                    <MapPin className="h-5 w-5" />
+                    <span>Michigan-area opportunities</span>
+                  </div>
                 </div>
               </div>
+
             </div>
 
             <form className="bid-list-form" action="mailto:bula@buladev.com" method="post" encType="text/plain">
@@ -358,10 +360,6 @@ export default function HomePage() {
       <section className="px-4 pb-12 sm:px-6 lg:px-8" id="contact">
         <div className="cta-band image-match-cta mx-auto max-w-7xl text-white">
           <div className="image-match-cta-copy">
-            <span className="image-match-cta-kicker">
-              <ClipboardCheck className="h-4 w-4" />
-              Project Consultation
-            </span>
             <h2>Ready to Start Your Project?</h2>
             <p>Let&apos;s turn your ideas into reality with a team you can rely on.</p>
           </div>

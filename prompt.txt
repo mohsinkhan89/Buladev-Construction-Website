@@ -15,3 +15,6 @@ reference prompt 005:
 
 reference prompt 006:
     feat: update header styles and add project consultation call-to-action
+
+reference prompt 007:
+    Add sticky contact cards and update bid list section styles for improved layout
