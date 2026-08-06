@@ -43,3 +43,14 @@ reference prompt 010:
     - Introduced animations for bid list success messages.
     - Created new API routes for managing bid list submissions and users, including GET and DELETE methods.
     - Developed DashboardTabs component to manage user and bid list submissions with loading states and error handling.
+
+reference prompt 011:
+    feat: implement user management features in dashboard
+
+    - Add PATCH and POST endpoints for user updates and creation in the API.
+    - Enhance user validation and error handling for email uniqueness.
+    - Refactor dashboard page to utilize a new DashboardWorkspace component.
+    - Create a comprehensive DashboardWorkspace component for managing users and submissions.
+    - Implement CRUD operations for users and submissions with modals for adding/editing records.
+    - Introduce loading states and error handling for data fetching.
+    - Style enhancements for dashboard UI elements and forms.
