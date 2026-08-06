@@ -4074,3 +4074,666 @@ h3,
     font-size: clamp(1.65rem, 8vw, 2.05rem) !important;
   }
 }
+
+/* Login and dashboard typography aligned with home page theme */
+.auth-page,
+.admin-dashboard {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+.auth-page h1,
+.auth-page h2,
+.auth-page h3,
+.auth-page label,
+.auth-page button,
+.auth-page .font-rajdhani,
+.admin-dashboard h1,
+.admin-dashboard h2,
+.admin-dashboard h3,
+.admin-dashboard th,
+.admin-dashboard button,
+.admin-dashboard nav,
+.admin-dashboard .font-rajdhani {
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  letter-spacing: 0 !important;
+}
+
+.auth-page p,
+.auth-page input,
+.auth-page .font-montserrat,
+.admin-dashboard p,
+.admin-dashboard table,
+.admin-dashboard td,
+.admin-dashboard .font-montserrat {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  letter-spacing: 0 !important;
+}
+
+.auth-page h1 {
+  font-size: clamp(2.45rem, 5.4vw, 4.25rem) !important;
+  font-weight: 600 !important;
+  line-height: 0.96 !important;
+  text-transform: uppercase;
+}
+
+.auth-page h2 {
+  font-size: clamp(1.55rem, 2.8vw, 2.05rem) !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-transform: uppercase;
+}
+
+.auth-page p {
+  font-size: clamp(0.86rem, 1vw, 0.98rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.65 !important;
+}
+
+.auth-page label,
+.auth-page button,
+.auth-page span {
+  letter-spacing: 0 !important;
+}
+
+.auth-page input {
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+.admin-dashboard header h1 {
+  font-size: clamp(1.45rem, 2.4vw, 2rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.02 !important;
+  text-transform: uppercase;
+}
+
+.admin-dashboard article h2 {
+  font-size: clamp(1.35rem, 2vw, 1.8rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.02 !important;
+  text-transform: uppercase;
+}
+
+.admin-dashboard section.grid article h2 {
+  font-size: clamp(2rem, 3vw, 2.55rem) !important;
+  font-weight: 900 !important;
+  line-height: 0.95 !important;
+}
+
+.admin-dashboard p,
+.admin-dashboard td,
+.admin-dashboard a {
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.admin-dashboard nav a,
+.admin-dashboard button,
+.admin-dashboard th,
+.admin-dashboard span {
+  letter-spacing: 0 !important;
+}
+
+.admin-dashboard th {
+  font-size: 0.72rem !important;
+}
+
+.admin-dashboard td {
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .auth-page h1 {
+    font-size: clamp(2.2rem, 11vw, 3.05rem) !important;
+  }
+
+  .auth-page h2,
+  .admin-dashboard header h1 {
+    font-size: clamp(1.35rem, 7vw, 1.75rem) !important;
+  }
+
+  .admin-dashboard section.grid article h2 {
+    font-size: clamp(1.85rem, 9vw, 2.25rem) !important;
+  }
+}
+
+/* Compact login/dashboard pass and hard overflow fix */
+.auth-page,
+.admin-dashboard {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.auth-page *,
+.admin-dashboard * {
+  box-sizing: border-box;
+}
+
+.admin-dashboard > section,
+.admin-dashboard header,
+.admin-dashboard article,
+.admin-dashboard table,
+.admin-dashboard .grid,
+.admin-dashboard .overflow-x-auto {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.admin-dashboard .overflow-x-auto {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.admin-dashboard > aside {
+  width: 16rem !important;
+}
+
+.admin-dashboard > aside > div {
+  padding: 1rem !important;
+}
+
+.admin-dashboard > aside a[aria-label="BULADEV home"] {
+  width: 13rem !important;
+  margin-bottom: 1.6rem !important;
+}
+
+.admin-dashboard nav {
+  gap: 0.4rem !important;
+  font-size: 0.82rem !important;
+}
+
+.admin-dashboard nav a,
+.admin-dashboard > aside button {
+  min-height: 2.55rem;
+  padding: 0.58rem 0.72rem !important;
+  gap: 0.55rem !important;
+}
+
+.admin-dashboard nav svg,
+.admin-dashboard button svg {
+  width: 1.05rem !important;
+  height: 1.05rem !important;
+}
+
+@media (min-width: 1024px) {
+  .admin-dashboard > section {
+    padding-left: 16rem !important;
+  }
+}
+
+.admin-dashboard header {
+  padding: 0.72rem 1.05rem !important;
+}
+
+@media (min-width: 1024px) {
+  .admin-dashboard header {
+    padding-right: 1.35rem !important;
+    padding-left: 1.35rem !important;
+  }
+}
+
+.admin-dashboard header p {
+  font-size: 0.72rem !important;
+  line-height: 1.1 !important;
+}
+
+.admin-dashboard header h1 {
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem) !important;
+  line-height: 1 !important;
+}
+
+.admin-dashboard > section > div {
+  padding: 1rem !important;
+}
+
+@media (min-width: 1024px) {
+  .admin-dashboard > section > div {
+    padding: 1.25rem 1.35rem !important;
+  }
+}
+
+.admin-dashboard section.grid {
+  gap: 0.85rem !important;
+}
+
+.admin-dashboard article {
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06) !important;
+}
+
+.admin-dashboard article > div:first-child,
+.admin-dashboard article .mb-5 {
+  margin-bottom: 0.85rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.admin-dashboard article p {
+  font-size: 0.74rem !important;
+  line-height: 1.25 !important;
+}
+
+.admin-dashboard article h2 {
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem) !important;
+  line-height: 1 !important;
+}
+
+.admin-dashboard section.grid article h2 {
+  margin-top: 0.55rem !important;
+  font-size: clamp(1.7rem, 2.5vw, 2.1rem) !important;
+  line-height: 0.95 !important;
+}
+
+.admin-dashboard article .grid.h-12,
+.admin-dashboard article span.grid.h-12 {
+  width: 2.35rem !important;
+  height: 2.35rem !important;
+}
+
+.admin-dashboard article span.grid.h-12 svg {
+  width: 1.15rem !important;
+  height: 1.15rem !important;
+}
+
+.admin-dashboard table {
+  font-size: 0.78rem !important;
+}
+
+.admin-dashboard th {
+  padding-top: 0.62rem !important;
+  padding-bottom: 0.62rem !important;
+  padding-right: 0.7rem !important;
+  font-size: 0.68rem !important;
+  white-space: nowrap;
+}
+
+.admin-dashboard td {
+  padding-top: 0.72rem !important;
+  padding-bottom: 0.72rem !important;
+  padding-right: 0.7rem !important;
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+  vertical-align: top;
+}
+
+.admin-dashboard td a,
+.admin-dashboard td .text-xs {
+  font-size: 0.68rem !important;
+}
+
+.admin-dashboard td span,
+.admin-dashboard article span.rounded-full {
+  font-size: 0.66rem !important;
+  padding: 0.2rem 0.5rem !important;
+  white-space: nowrap;
+}
+
+.auth-page h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.45rem) !important;
+  line-height: 0.96 !important;
+}
+
+.auth-page h2 {
+  font-size: clamp(1.4rem, 2.2vw, 1.75rem) !important;
+}
+
+.auth-page p {
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+}
+
+.auth-page input,
+.auth-page button {
+  min-height: 2.75rem !important;
+  height: 2.75rem !important;
+  font-size: 0.82rem !important;
+}
+
+@media (max-width: 767px) {
+  .admin-dashboard > section > div {
+    padding: 0.8rem !important;
+  }
+
+  .admin-dashboard header {
+    padding: 0.7rem 0.8rem !important;
+  }
+
+  .admin-dashboard article {
+    padding: 0.85rem !important;
+  }
+
+  .admin-dashboard header h1 {
+    font-size: clamp(1.18rem, 6vw, 1.45rem) !important;
+  }
+
+  .admin-dashboard section.grid article h2 {
+    font-size: clamp(1.55rem, 8vw, 1.95rem) !important;
+  }
+
+  .admin-dashboard table {
+    min-width: 620px !important;
+  }
+
+  .auth-page h1 {
+    font-size: clamp(2rem, 10vw, 2.65rem) !important;
+  }
+}
+
+/* Bid List success message slide-up feedback */
+@keyframes bidSuccessSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bidSuccessSlideAway {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+}
+
+.bid-list-submit-message.is-success {
+  animation:
+    bidSuccessSlideIn 260ms ease both,
+    bidSuccessSlideAway 360ms ease 4s forwards;
+}
+
+/* Dashboard database tabs */
+.dashboard-tabs {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.dashboard-tabs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #f4f4f5;
+  padding: 1rem;
+}
+
+.dashboard-tabs-header h2 {
+  margin-top: 0.16rem;
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem) !important;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.dashboard-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  border-bottom: 1px solid #f4f4f5;
+  padding: 0.75rem 1rem;
+}
+
+.dashboard-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.35rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 0.5rem 0.75rem;
+  color: #3f3f46;
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.dashboard-tab:hover,
+.dashboard-tab.is-active {
+  border-color: rgba(245, 114, 22, 0.55);
+  background: #fff7ed;
+  color: #f57216;
+}
+
+.dashboard-tab.is-active {
+  box-shadow: 0 12px 26px rgba(245, 114, 22, 0.12);
+}
+
+.dashboard-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.dashboard-data-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+}
+
+.dashboard-data-table.is-bid-table {
+  min-width: 860px;
+}
+
+.dashboard-data-table th {
+  border-bottom: 1px solid #f4f4f5;
+  padding: 0.7rem 0.85rem;
+  color: #71717a;
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.7rem !important;
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dashboard-data-table td {
+  border-bottom: 1px solid #f4f4f5;
+  padding: 0.75rem 0.85rem;
+  color: #52525b;
+  font-size: 0.78rem !important;
+  font-weight: 600;
+  vertical-align: top;
+}
+
+.dashboard-data-table tbody tr:hover {
+  background: #fffaf5;
+}
+
+.dashboard-data-table a {
+  color: #71717a;
+  font-size: 0.68rem !important;
+  font-weight: 700;
+}
+
+.dashboard-data-table a:hover {
+  color: #f57216;
+}
+
+.dashboard-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.42rem;
+}
+
+.dashboard-icon-action {
+  display: inline-grid;
+  width: 2.1rem;
+  height: 2.1rem;
+  place-items: center;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #071018;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.dashboard-icon-action:hover {
+  border-color: rgba(245, 114, 22, 0.5);
+  background: #fff7ed;
+  color: #f57216;
+  transform: translateY(-1px);
+}
+
+.dashboard-icon-action.is-danger:hover {
+  border-color: rgba(239, 68, 68, 0.42);
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.dashboard-icon-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+}
+
+.dashboard-table-error {
+  margin: 0.8rem 1rem 0;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 8px;
+  background: #fef2f2;
+  padding: 0.7rem 0.85rem;
+  color: #b91c1c;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.dashboard-table-state {
+  height: 5rem;
+  color: #71717a !important;
+  text-align: center;
+}
+
+.dashboard-table-state svg {
+  display: inline-block;
+  margin-right: 0.4rem;
+  vertical-align: -0.12rem;
+}
+
+.dashboard-table-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-top: 1px solid #f4f4f5;
+  padding: 0.75rem 1rem;
+  color: #71717a;
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.dashboard-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(7, 16, 24, 0.62);
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-modal {
+  width: min(100%, 42rem);
+  max-height: min(82vh, 46rem);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 26px 80px rgba(7, 16, 24, 0.28);
+}
+
+.dashboard-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #f4f4f5;
+  padding: 1rem;
+}
+
+.dashboard-modal-header p {
+  color: #f57216;
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.78rem !important;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.dashboard-modal-header h3 {
+  margin-top: 0.14rem;
+  color: #071018;
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.dashboard-detail-grid {
+  display: grid;
+  max-height: calc(82vh - 5rem);
+  gap: 0.75rem;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.dashboard-detail-grid div {
+  border: 1px solid #f4f4f5;
+  border-radius: 8px;
+  background: #fafafa;
+  padding: 0.72rem;
+}
+
+.dashboard-detail-grid span {
+  display: block;
+  color: #71717a;
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.72rem !important;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.dashboard-detail-grid p {
+  margin-top: 0.22rem;
+  color: #071018;
+  font-size: 0.84rem !important;
+  font-weight: 700;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+@media (max-width: 767px) {
+  .dashboard-tabs-header,
+  .dashboard-tab-list,
+  .dashboard-table-footer {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+  }
+
+  .dashboard-tab {
+    flex: 1 1 100%;
+  }
+
+  .dashboard-data-table,
+  .dashboard-data-table.is-bid-table {
+    min-width: 720px;
+  }
+}

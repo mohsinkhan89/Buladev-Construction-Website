@@ -1,4 +1,4 @@
-﻿import { HardHat, LockKeyhole, ShieldCheck } from "lucide-react";
+import { HardHat, LockKeyhole, ShieldCheck } from "lucide-react";
 import { redirect } from "next/navigation";
 import { getCurrentUser } from "../lib/auth";
 import LoginForm from "./LoginForm";
@@ -13,7 +13,7 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen bg-coal text-white">
+    <main className="auth-page min-h-screen bg-coal text-white">
       <section className="relative grid min-h-screen overflow-hidden lg:grid-cols-[1.02fr_0.98fr]">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,16,24,0.98),rgba(7,16,24,0.9),rgba(7,16,24,0.72)),url('/img/banners/hero-section.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:44px_44px]" />

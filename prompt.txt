@@ -33,3 +33,13 @@ reference prompt 008:
 
 reference prompt 009:
     Implement bid list submission feature with form handling and database integration
+
+reference prompt 010:
+    feat: enhance login and dashboard UI with new typography and layout adjustments
+
+    - Updated global CSS for login and dashboard pages to align typography with the home page theme.
+    - Added responsive styles for better mobile experience.
+    - Implemented compact layout for login and dashboard to fix overflow issues.
+    - Introduced animations for bid list success messages.
+    - Created new API routes for managing bid list submissions and users, including GET and DELETE methods.
+    - Developed DashboardTabs component to manage user and bid list submissions with loading states and error handling.

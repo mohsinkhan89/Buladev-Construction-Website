@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import { Building2, CheckCircle2, Database, Loader2, Send } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 type SubmitState = {
   type: "idle" | "success" | "error";
@@ -11,11 +11,24 @@ type SubmitState = {
 export default function BidListForm() {
   const [submitState, setSubmitState] = useState<SubmitState>({ type: "idle", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const successTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (successTimerRef.current) {
+        clearTimeout(successTimerRef.current);
+      }
+    };
+  }, []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsSubmitting(true);
     setSubmitState({ type: "idle", message: "" });
+    if (successTimerRef.current) {
+      clearTimeout(successTimerRef.current);
+      successTimerRef.current = null;
+    }
 
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -46,6 +59,10 @@ export default function BidListForm() {
 
       form.reset();
       setSubmitState({ type: "success", message: data.message || "Your bid list request has been submitted." });
+      successTimerRef.current = setTimeout(() => {
+        setSubmitState({ type: "idle", message: "" });
+        successTimerRef.current = null;
+      }, 4400);
     } catch {
       setSubmitState({ type: "error", message: "Unable to reach the submission service." });
     } finally {
