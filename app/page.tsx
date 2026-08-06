@@ -1,4 +1,4 @@
-import { createElement, type CSSProperties } from "react";
+﻿import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
 import ScrollReveal from "./ScrollReveal";
 import ProjectGallery from "./ProjectGallery";
@@ -165,7 +165,7 @@ export default function HomePage() {
       <section className="hero-shell" id="home">
         <div className="hero-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="hero-grid">
-            <div className="relative z-10 max-w-5xl py-14 sm:py-20 lg:py-[5.6rem]">
+            <div className="relative z-10 max-w-5xl pb-14 sm:pb-20 lg:pb-[5.6rem]">
               <h1 className="hero-title">
                 Building
                 <br />

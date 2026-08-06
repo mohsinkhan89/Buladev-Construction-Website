@@ -54,3 +54,6 @@ reference prompt 011:
     - Implement CRUD operations for users and submissions with modals for adding/editing records.
     - Introduce loading states and error handling for data fetching.
     - Style enhancements for dashboard UI elements and forms.
+
+reference prompt 012:
+    fix: correct padding in hero section and remove invisible character
