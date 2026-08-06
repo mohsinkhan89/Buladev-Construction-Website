@@ -3,3 +3,6 @@ reference prompt 001:
 
 reference prompt 002:
     Add new styles and structure to enhance layout and design elements
+
+reference prompt 003:
+    refactor: remove unused top badges and clean up imports for improved code clarity

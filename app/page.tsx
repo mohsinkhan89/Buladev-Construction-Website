@@ -1,23 +1,10 @@
-﻿import { createElement, type CSSProperties } from "react";
+import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
 import ScrollReveal from "./ScrollReveal";
 import ProjectGallery from "./ProjectGallery";
-import {
-  Award,
-  CheckCircle2,
-  ClipboardCheck,
-  Phone,
-  ShieldCheck,
-} from "lucide-react";
+import { Phone } from "lucide-react";
 
 const navItems = ["Home", "About", "Services", "Projects", "Process", "Testimonials", "Contact"];
-
-const topBadges = [
-  { label: "20+ Years Experience", icon: Award },
-  { label: "Licensed & Insured", icon: ShieldCheck },
-  { label: "Lean Six Sigma Certified", icon: CheckCircle2 },
-  { label: "Professional Project Management", icon: ClipboardCheck },
-];
 
 const services = [
   {
@@ -125,21 +112,6 @@ export default function HomePage() {
       <ScrollReveal />
       <section className="hero-shell">
         <div className="hero-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
-          <div className="top-strip">
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
-              {topBadges.map(({ label, icon: Icon }) => (
-                <div key={label} className="top-strip-item">
-                  <span className="mini-icon"><Icon className="h-3.5 w-3.5" /></span>
-                  <span>{label}</span>
-                </div>
-              ))}
-            </div>
-            <a className="top-strip-item font-extrabold" href="tel:3134449734">
-              <span className="mini-icon"><Phone className="h-3.5 w-3.5" /></span>
-              (313) 444-9734
-            </a>
-          </div>
-
           <header className="site-header" data-sticky-header>
             <div className="flex items-center gap-5">
               <LogoWhite />
