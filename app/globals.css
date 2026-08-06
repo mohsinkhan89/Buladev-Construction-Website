@@ -3564,9 +3564,9 @@ h3,
   transform: none !important;
   border-radius: 0 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(7, 16, 24, 0.86);
+  /* background: rgba(7, 16, 24, 0.86); */
   box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(16px);
+  /* backdrop-filter: blur(16px); */
 }
 
 .site-header.is-stuck {
@@ -3686,16 +3686,6 @@ h3,
   background-position: center;
   color: #ffffff;
   box-shadow: 0 22px 55px rgba(15, 23, 42, 0.18);
-}
-
-.bid-list-copy::after {
-  content: "";
-  position: absolute;
-  inset: auto -18% -28% 28%;
-  height: 48%;
-  transform: skewX(-18deg);
-  background: rgba(245, 114, 22, 0.18);
-  pointer-events: none;
 }
 
 .bid-list-kicker {
@@ -3890,6 +3880,9 @@ h3,
   font-weight: 700;
   text-transform: uppercase;
   box-shadow: 0 18px 36px rgba(245, 114, 22, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bid-list-note {

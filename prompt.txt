@@ -12,3 +12,6 @@ reference prompt 004:
 
 reference prompt 005:
     feat: add Bid List section with form and navigation updates
+
+reference prompt 006:
+    feat: update header styles and add project consultation call-to-action

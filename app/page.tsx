@@ -358,6 +358,10 @@ export default function HomePage() {
       <section className="px-4 pb-12 sm:px-6 lg:px-8" id="contact">
         <div className="cta-band image-match-cta mx-auto max-w-7xl text-white">
           <div className="image-match-cta-copy">
+            <span className="image-match-cta-kicker">
+              <ClipboardCheck className="h-4 w-4" />
+              Project Consultation
+            </span>
             <h2>Ready to Start Your Project?</h2>
             <p>Let&apos;s turn your ideas into reality with a team you can rely on.</p>
           </div>
