@@ -69,3 +69,6 @@ reference prompt 015:
 
 reference prompt 016:
     refactor: upsdate navigation links to use Next.js Link component and correct hrefs
+
+reference prompt 017:
+    refactor: update partner-hero styles for improved layout and remove unused styles
