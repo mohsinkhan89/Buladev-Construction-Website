@@ -75,3 +75,6 @@ reference prompt 017:
 
 reference prompt 018:
     update partner titles to reflect Buladev branding
+
+reference prompt 019:
+    adjust min-height of partner card grid from 9rem to 8rem

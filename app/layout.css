@@ -170,8 +170,7 @@
   display: grid;
   grid-template-columns: 3.1rem 1fr;
   column-gap: 1.25rem;
-  row-gap: 1.15rem;
-  min-height: 9rem;
+  min-height: 8rem;
   padding: 1.25rem 1.35rem 1.55rem;
 }
 
