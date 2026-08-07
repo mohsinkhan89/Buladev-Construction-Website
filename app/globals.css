@@ -4989,3 +4989,73 @@ h3,
     grid-template-columns: 1fr;
   }
 }
+
+/* Homepage card, button, and CTA hover refinements */
+.service-icon-wrap lord-icon,
+.button-lord-icon,
+.filter-lord-icon {
+  pointer-events: none;
+}
+
+.project-image-wrap {
+  background: #071018;
+}
+
+.project-image {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1), filter 650ms ease;
+  will-change: transform, filter;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.12) rotate(0.35deg);
+  filter: saturate(1.14) contrast(1.08) brightness(0.96);
+}
+
+.project-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(115deg, transparent 0 38%, rgba(255, 255, 255, 0.22) 48%, transparent 58%);
+  opacity: 0;
+  transform: translateX(-70%);
+  transition: opacity 380ms ease, transform 650ms ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-image-wrap::before {
+  opacity: 1;
+  transform: translateX(70%);
+}
+
+.image-match-cta-phone-icon {
+  position: relative;
+  isolation: isolate;
+  animation: ctaPhonePulse 2.1s ease-in-out infinite;
+}
+
+.image-match-cta-phone-icon::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -1;
+  border: 1px solid rgba(245, 114, 22, 0.58);
+  border-radius: inherit;
+  animation: ctaPhonePulseRing 2.1s ease-out infinite;
+}
+
+.image-match-cta-phone:hover .image-match-cta-phone-icon {
+  animation-duration: 1.15s;
+}
+
+@keyframes ctaPhonePulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(245, 114, 22, 0); }
+  50% { transform: scale(1.08); box-shadow: 0 0 22px rgba(245, 114, 22, 0.28); }
+}
+
+@keyframes ctaPhonePulseRing {
+  0% { opacity: 0.78; transform: scale(0.85); }
+  80%, 100% { opacity: 0; transform: scale(1.45); }
+}

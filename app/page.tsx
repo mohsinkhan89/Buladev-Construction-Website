@@ -94,20 +94,30 @@ function LogoWhite() {
 }
 
 
-function ButtonLordIcon({ src, light = true }: { src: string; light?: boolean }) {
+function ButtonLordIcon({
+  src,
+  light = true,
+  target = ".modern-action-btn",
+}: {
+  src: string;
+  light?: boolean;
+  target?: string;
+}) {
   return createElement("lord-icon", {
     src,
     trigger: "loop-on-hover",
+    target,
     delay: "120",
     colors: light ? "primary:#ffffff,secondary:#fed7aa" : "primary:#071018,secondary:#f57216",
     className: "button-lord-icon",
     style: { width: "20px", height: "20px" } as CSSProperties,
   });
 }
-function LordIcon({ src, size = 56 }: { src: string; size?: number }) {
+function LordIcon({ src, size = 56, target = ".service-card" }: { src: string; size?: number; target?: string }) {
   return createElement("lord-icon", {
     src,
     trigger: "loop-on-hover",
+    target,
     delay: "200",
     colors: "primary:#071018,secondary:#f57216",
     style: { width: `${size}px`, height: `${size}px` } as CSSProperties,
@@ -192,7 +202,7 @@ export default function HomePage() {
                 <Link className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="/#services"><ButtonLordIcon src="https://cdn.lordicon.com/cnpvyndp.json" /><span>Explore Services</span></Link>
                 <Link className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="/partner-with-us"><ButtonLordIcon src="https://cdn.lordicon.com/abwrkdvl.json" /><span>Partner With Us</span></Link>
                 <Link className="watch-link modern-watch-link" href="/#projects">
-                  <span className="play-orbit"><ButtonLordIcon src="https://cdn.lordicon.com/slduhdil.json" /></span>
+                  <span className="play-orbit"><ButtonLordIcon src="https://cdn.lordicon.com/slduhdil.json" target=".modern-watch-link" /></span>
                   <span>Watch Video</span>
                 </Link>
               </div>

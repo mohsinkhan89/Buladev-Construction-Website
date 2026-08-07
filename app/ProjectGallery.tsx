@@ -17,10 +17,19 @@ const filters = [
   { label: "Retail", icon: "https://cdn.lordicon.com/slduhdil.json" },
 ];
 
-function ButtonLordIcon({ src, light = false }: { src: string; light?: boolean }) {
+function ButtonLordIcon({
+  src,
+  light = false,
+  target = ".modern-filter-button",
+}: {
+  src: string;
+  light?: boolean;
+  target?: string;
+}) {
   return createElement("lord-icon", {
     src,
     trigger: "loop-on-hover",
+    target,
     delay: "120",
     colors: light ? "primary:#ffffff,secondary:#fed7aa" : "primary:#071018,secondary:#f57216",
     className: "button-lord-icon filter-lord-icon",
@@ -88,6 +97,7 @@ export default function ProjectGallery({ projects }: { projects: Project[] }) {
           {createElement("lord-icon", {
             src: "https://cdn.lordicon.com/oqdmuxru.json",
             trigger: "loop-on-hover",
+            target: ".modern-outline-button",
             delay: "120",
             colors: "primary:#071018,secondary:#f57216",
             className: "button-lord-icon",
