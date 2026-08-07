@@ -192,6 +192,7 @@ export default function HomePage() {
               <div className="mt-7 flex flex-wrap items-center gap-4">
                 <a className="primary-btn modern-action-btn magnetic-btn" href="#contact"><ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" /><span>Get Started</span></a>
                 <a className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="#services"><ButtonLordIcon src="https://cdn.lordicon.com/cnpvyndp.json" /><span>Explore Services</span></a>
+                <a className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="/partner-with-us"><ButtonLordIcon src="https://cdn.lordicon.com/abwrkdvl.json" /><span>Partner With Us</span></a>
                 <a className="watch-link modern-watch-link" href="#projects">
                   <span className="play-orbit"><ButtonLordIcon src="https://cdn.lordicon.com/slduhdil.json" /></span>
                   <span>Watch Video</span>
@@ -327,7 +328,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="image-match-footer-copy mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p>© 2025 BULADEV Building & Land Development + ASA Construction LLC. All Rights Reserved.</p>
+          <p>&copy; 2025 BULADEV Building & Land Development + ASA Construction LLC. All Rights Reserved.</p>
         </div>
       </footer>
     </main>

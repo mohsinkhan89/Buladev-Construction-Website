@@ -1,0 +1,14 @@
+ ⨯ ./app/page.tsx
+Error: 
+  [31mx[0m Expected unicode escape
+   ,-[[36;1;4mD:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\app\page.tsx[0m:1:1]
+ [2m1[0m | C:\Users\Mohsin
+   : [31;1m  ^[0m
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/page.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\cache\webpack\client-development\9.pack.gz_' -> 'D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\cache\webpack\client-development\9.pack.gz'

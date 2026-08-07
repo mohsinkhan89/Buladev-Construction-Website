@@ -63,3 +63,6 @@ reference prompt 013:
 
 reference prompt 014:
     refactor: update styles for Partner With Us page and improve layout responsiveness
+
+reference prompt 015:
+    Add partner card icons and update Partner With Us page layout

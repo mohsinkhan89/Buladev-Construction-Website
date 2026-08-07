@@ -1,7 +1,7 @@
 import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "../StickyHeaderState";
 import ScrollReveal from "../ScrollReveal";
-import { ArrowRight, Building2, Home, Phone, PlusCircle } from "lucide-react";
+import { Home, Phone } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -20,11 +20,13 @@ const partnerCards = [
     title: "Partner with Gilbane Building",
     image: "/img/partners/partner-building.png",
     href: "/#bid-list",
+    icon: "https://cdn.lordicon.com/abwrkdvl.json",
   },
   {
     title: "Partner with Gilbane Development",
     image: "/img/partners/partner-development.png",
     href: "/#bid-list",
+    icon: "https://cdn.lordicon.com/wloilxuq.json",
   },
 ];
 
@@ -70,6 +72,17 @@ function ButtonLordIcon({ src, light = true }: { src: string; light?: boolean })
     colors: light ? "primary:#ffffff,secondary:#fed7aa" : "primary:#071018,secondary:#f57216",
     className: "button-lord-icon",
     style: { width: "20px", height: "20px" } as CSSProperties,
+  });
+}
+
+function CardLordIcon({ src }: { src: string }) {
+  return createElement("lord-icon", {
+    src,
+    trigger: "loop-on-hover",
+    delay: "160",
+    colors: "primary:#ffffff,secondary:#fed7aa",
+    className: "partner-card-lord-icon",
+    style: { width: "34px", height: "34px" } as CSSProperties,
   });
 }
 
@@ -139,15 +152,14 @@ export default function PartnerWithUsPage() {
               Partner
               <span>With Us.</span>
             </h1>
-            <div className="partner-hero-rule" />
+            {/* <div className="partner-hero-rule" /> */}
             <p>
               Collaboration is at the core of everything we build.<br />
               Together, we create lasting impact in our communities.
             </p>
             <a className="partner-hero-button modern-action-btn magnetic-btn" href="#partner-options">
-              <Home className="h-5 w-5" />
+              <ButtonLordIcon src="https://cdn.lordicon.com/abwrkdvl.json" />
               <span>Let&apos;s Build Together</span>
-              <ArrowRight className="h-5 w-5" />
             </a>
           </div>
         </div>
@@ -161,12 +173,12 @@ export default function PartnerWithUsPage() {
                 <img src={card.image} alt={card.title} />
                 <div className="partner-card-body">
                   <div className="partner-card-icon" aria-hidden="true">
-                    <Building2 className="h-7 w-7" />
+                    <CardLordIcon src={card.icon} />
                   </div>
                   <h2>{card.title}</h2>
                   <a href={card.href}>
                     <span>Learn More</span>
-                    <ArrowRight className="h-5 w-5" />
+                    <ButtonLordIcon src="https://cdn.lordicon.com/zmkotitn.json" light={false} />
                   </a>
                 </div>
               </article>
@@ -190,9 +202,8 @@ export default function PartnerWithUsPage() {
               (313) 444-9734
             </a>
             <a className="image-match-cta-button modern-action-btn magnetic-btn" href="mailto:bula@buladev.com">
-              <PlusCircle className="h-5 w-5" />
+              <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
               <span>Request Consultation</span>
-              <ArrowRight className="h-5 w-5" />
             </a>
           </div>
         </div>
@@ -230,7 +241,7 @@ export default function PartnerWithUsPage() {
           </div>
         </div>
         <div className="image-match-footer-copy mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p>Â© 2025 BULADEV Building & Land Development + ASA Construction LLC. All Rights Reserved.</p>
+          <p>&copy; 2025 BULADEV Building & Land Development + ASA Construction LLC. All Rights Reserved.</p>
         </div>
       </footer>
     </main>

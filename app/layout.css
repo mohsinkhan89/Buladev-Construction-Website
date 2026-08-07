@@ -199,6 +199,10 @@
   background: #f57216;
 }
 
+.partner-card-lord-icon {
+  display: block;
+}
+
 .partner-card-icon {
   display: inline-flex;
   align-items: center;
