@@ -1,4 +1,4 @@
-﻿import { createElement, type CSSProperties } from "react";
+import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
 import ScrollReveal from "./ScrollReveal";
 import ProjectGallery from "./ProjectGallery";
@@ -7,6 +7,7 @@ import { CheckCircle2, ClipboardCheck, FileText, MapPin, Phone } from "lucide-re
 
 const navItems = [
   { label: "Home", href: "#home" },
+  { label: "Partner With Us", href: "/partner-with-us" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Projects", href: "#projects" },

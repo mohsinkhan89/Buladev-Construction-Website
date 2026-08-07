@@ -57,3 +57,6 @@ reference prompt 011:
 
 reference prompt 012:
     fix: correct padding in hero section and remove invisible character
+
+reference prompt 013:
+    Add Partner With Us page and associated styles; update navigation

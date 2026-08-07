@@ -1,0 +1,30 @@
+
+> buladev-landing-page@1.0.0 dev
+> next dev -p 3000
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 5s
+ ○ Compiling /partner-with-us ...
+ ✓ Compiled /partner-with-us in 6.3s (497 modules)
+ GET /partner-with-us 200 in 6684ms
+ ✓ Compiled in 738ms (242 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 2s (500 modules)
+ GET / 200 in 2981ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 737ms (503 modules)
+ GET /_next/static/css/app/layout.css?v=1786099735498 404 in 1133ms
+ GET /_next/static/chunks/app/layout.js 404 in 989ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 1004ms
+ GET /_next/static/chunks/main-app.js?v=1786099735498 404 in 1044ms
+ ✓ Compiled in 2.6s (257 modules)
+ ✓ Compiled in 608ms (257 modules)
+ ✓ Compiled in 393ms (257 modules)
+ ✓ Compiled in 2.2s (257 modules)
+ ✓ Compiled in 1350ms (257 modules)
+ ✓ Compiled in 5.1s (257 modules)
+ ✓ Compiled in 687ms (257 modules)
