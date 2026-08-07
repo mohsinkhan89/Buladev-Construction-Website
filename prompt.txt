@@ -60,3 +60,6 @@ reference prompt 012:
 
 reference prompt 013:
     Add Partner With Us page and associated styles; update navigation
+
+reference prompt 014:
+    refactor: update styles for Partner With Us page and improve layout responsiveness
