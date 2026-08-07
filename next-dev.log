@@ -7,26 +7,8 @@
   - Environments: .env.local
 
  ✓ Starting...
- ✓ Ready in 5.1s
- ○ Compiling /partner-with-us ...
- ✓ Compiled /partner-with-us in 8.7s (484 modules)
- GET /partner-with-us 200 in 9312ms
- ✓ Compiled in 664ms (242 modules)
- ✓ Compiled in 2.4s (255 modules)
- ✓ Compiled in 407ms (242 modules)
- ✓ Compiled in 453ms (242 modules)
+ ✓ Ready in 3.1s
  ○ Compiling / ...
- ✓ Compiled / in 1342ms (514 modules)
- GET / 200 in 1658ms
- ✓ Compiled /partner-with-us in 215ms (262 modules)
- GET /partner-with-us 200 in 396ms
- ✓ Compiled in 1385ms (256 modules)
- ✓ Compiled in 480ms (256 modules)
- ✓ Compiled in 406ms (243 modules)
- ✓ Compiled in 497ms (256 modules)
- ○ Compiling / ...
- ✓ Compiled / in 875ms (500 modules)
- GET / 200 in 1230ms
- ✓ Compiled /partner-with-us in 113ms (262 modules)
- GET /partner-with-us 200 in 315ms
- ✓ Compiled in 2.7s (257 modules)
+ ✓ Compiled /partner-with-us in 6.1s (559 modules)
+ GET /partner-with-us 200 in 2398ms
+ GET / 200 in 6441ms

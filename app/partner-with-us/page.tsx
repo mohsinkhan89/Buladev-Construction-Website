@@ -1,16 +1,14 @@
+import Link from "next/link";
 import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "../StickyHeaderState";
 import ScrollReveal from "../ScrollReveal";
 import { Home, Phone } from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#home" },
   { label: "Partner With Us", href: "/partner-with-us" },
-  { label: "About", href: "/#about" },
   { label: "Services", href: "/#services" },
   { label: "Projects", href: "/#projects" },
-  { label: "Process", href: "/#process" },
-  { label: "Testimonials", href: "/#testimonials" },
   { label: "Bid List", href: "/#bid-list", featured: true },
   { label: "Contact", href: "/#contact" },
 ];
@@ -31,12 +29,11 @@ const partnerCards = [
 ];
 
 const footerQuickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/#about" },
+  { label: "Home", href: "/#home" },
+  { label: "Partner With Us", href: "/partner-with-us" },
   { label: "Services", href: "/#services" },
   { label: "Projects", href: "/#projects" },
   { label: "Join Our Bid List", href: "/#bid-list" },
-  { label: "Our Process", href: "/#process" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -50,17 +47,17 @@ const services = [
 
 function LogoBlock() {
   return (
-    <a className="logo-block" href="/" aria-label="BULADEV home">
+    <Link className="logo-block" href="/#home" aria-label="BULADEV home">
       <img className="logo-image" src="/img/logo/logo-black.png" alt="BULADEV Building & Land Development" />
-    </a>
+    </Link>
   );
 }
 
 function LogoWhite() {
   return (
-    <a className="logo-block" href="/" aria-label="BULADEV home">
+    <Link className="logo-block" href="/#home" aria-label="BULADEV home">
       <img className="logo-image" src="/img/logo/logo.png" alt="BULADEV Building & Land Development" />
-    </a>
+    </Link>
   );
 }
 
@@ -100,20 +97,20 @@ export default function PartnerWithUsPage() {
 
           <nav className="hidden items-center gap-5 lg:flex">
             {navItems.map((item) => (
-              <a
+              <Link
                 className={`nav-link ${item.label === "Partner With Us" ? "active" : ""} ${item.featured ? "nav-link-bid" : ""}`}
                 href={item.href}
                 key={item.label}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
-          <a className="header-cta modern-action-btn magnetic-btn" href="/#contact">
+          <Link className="header-cta modern-action-btn magnetic-btn" href="/#contact">
             <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
             <span>Request Consultation</span>
-          </a>
+          </Link>
 
           <input className="mobile-menu-check" id="partner-mobile-menu-toggle" type="checkbox" />
           <label className="mobile-menu-button" htmlFor="partner-mobile-menu-toggle" aria-label="Open menu">
@@ -125,13 +122,13 @@ export default function PartnerWithUsPage() {
           <div className="mobile-menu-panel">
             <nav className="mobile-menu-nav" aria-label="Mobile navigation">
               {navItems.map((item) => (
-                <a href={item.href} key={item.label}>{item.label === "Bid List" ? "Join Our Bid List" : item.label}</a>
+                <Link href={item.href} key={item.label}>{item.label === "Bid List" ? "Join Our Bid List" : item.label}</Link>
               ))}
             </nav>
-            <a className="mobile-menu-cta modern-action-btn magnetic-btn" href="/#contact">
+            <Link className="mobile-menu-cta modern-action-btn magnetic-btn" href="/#contact">
               <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
               <span>Request Consultation</span>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -139,10 +136,10 @@ export default function PartnerWithUsPage() {
       <section className="partner-hero">
         <div className="partner-hero-inner mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="partner-breadcrumb" aria-label="Breadcrumb">
-            <a href="/">
+            <Link href="/#home">
               <Home className="h-4 w-4" />
               <span>Home</span>
-            </a>
+            </Link>
             <span className="partner-breadcrumb-divider">/</span>
             <span>Partner With Us</span>
           </div>
@@ -157,10 +154,10 @@ export default function PartnerWithUsPage() {
               Collaboration is at the core of everything we build.<br />
               Together, we create lasting impact in our communities.
             </p>
-            <a className="partner-hero-button modern-action-btn magnetic-btn" href="#partner-options">
+            <Link className="partner-hero-button modern-action-btn magnetic-btn" href="#partner-options">
               <ButtonLordIcon src="https://cdn.lordicon.com/abwrkdvl.json" />
               <span>Let&apos;s Build Together</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -176,10 +173,10 @@ export default function PartnerWithUsPage() {
                     <CardLordIcon src={card.icon} />
                   </div>
                   <h2>{card.title}</h2>
-                  <a href={card.href}>
+                  <Link href={card.href}>
                     <span>Learn More</span>
                     <ButtonLordIcon src="https://cdn.lordicon.com/zmkotitn.json" light={false} />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -254,7 +251,7 @@ function FooterList({ title, items }: { title: string; items: { label: string; h
       <h3 className="footer-title">{title}</h3>
       <ul className="image-match-footer-links">
         {items.map((item) => (
-          <li key={item.label}><a href={item.href}>{item.label}</a></li>
+          <li key={item.label}><Link href={item.href}>{item.label}</Link></li>
         ))}
       </ul>
     </div>
@@ -267,7 +264,7 @@ function FooterTextList({ title, items }: { title: string; items: string[] }) {
       <h3 className="footer-title">{title}</h3>
       <ul className="image-match-footer-links">
         {items.map((item) => (
-          <li key={item}><a href="/#services">{item}</a></li>
+          <li key={item}><Link href="/#services">{item}</Link></li>
         ))}
       </ul>
     </div>

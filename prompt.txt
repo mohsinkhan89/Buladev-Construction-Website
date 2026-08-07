@@ -66,3 +66,6 @@ reference prompt 014:
 
 reference prompt 015:
     Add partner card icons and update Partner With Us page layout
+
+reference prompt 016:
+    refactor: upsdate navigation links to use Next.js Link component and correct hrefs

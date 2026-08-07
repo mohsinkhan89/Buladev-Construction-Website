@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "./StickyHeaderState";
 import ScrollReveal from "./ScrollReveal";
@@ -6,15 +7,12 @@ import BidListForm from "./BidListForm";
 import { CheckCircle2, ClipboardCheck, FileText, MapPin, Phone } from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/#home" },
   { label: "Partner With Us", href: "/partner-with-us" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Process", href: "#process" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Bid List", href: "#bid-list", featured: true },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Bid List", href: "/#bid-list", featured: true },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const services = [
@@ -82,16 +80,16 @@ const projects = [
 
 function LogoBlock() {
   return (
-    <a className="logo-block" href="#home" aria-label="BULADEV home">
+    <Link className="logo-block" href="/#home" aria-label="BULADEV home">
       <img className="logo-image" src="./img/logo/logo-black.png" alt="BULADEV Building & Land Development" />
-    </a>
+    </Link>
   );
 }
 function LogoWhite() {
   return (
-    <a className="logo-block" href="#home" aria-label="BULADEV home">
+    <Link className="logo-block" href="/#home" aria-label="BULADEV home">
       <img className="logo-image" src="./img/logo/logo.png" alt="BULADEV Building & Land Development" />
-    </a>
+    </Link>
   );
 }
 
@@ -129,20 +127,20 @@ export default function HomePage() {
 
           <nav className="hidden items-center gap-5 lg:flex">
             {navItems.map((item) => (
-              <a
+              <Link
                 className={`nav-link ${item.label === "Home" ? "active" : ""} ${item.featured ? "nav-link-bid" : ""}`}
                 href={item.href}
                 key={item.label}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
-          <a className="header-cta modern-action-btn magnetic-btn" href="#contact">
+          <Link className="header-cta modern-action-btn magnetic-btn" href="/#contact">
             <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
             <span>Request Consultation</span>
-          </a>
+          </Link>
           <input className="mobile-menu-check" id="mobile-menu-toggle" type="checkbox" />
           <label className="mobile-menu-button" htmlFor="mobile-menu-toggle" aria-label="Open menu">
             <span />
@@ -153,13 +151,13 @@ export default function HomePage() {
           <div className="mobile-menu-panel">
             <nav className="mobile-menu-nav" aria-label="Mobile navigation">
               {navItems.map((item) => (
-                <a href={item.href} key={item.label}>{item.label === "Bid List" ? "Join Our Bid List" : item.label}</a>
+                <Link href={item.href} key={item.label}>{item.label === "Bid List" ? "Join Our Bid List" : item.label}</Link>
               ))}
             </nav>
-            <a className="mobile-menu-cta modern-action-btn magnetic-btn" href="#contact">
+            <Link className="mobile-menu-cta modern-action-btn magnetic-btn" href="/#contact">
               <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
               <span>Request Consultation</span>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -190,13 +188,13 @@ export default function HomePage() {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <a className="primary-btn modern-action-btn magnetic-btn" href="#contact"><ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" /><span>Get Started</span></a>
-                <a className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="#services"><ButtonLordIcon src="https://cdn.lordicon.com/cnpvyndp.json" /><span>Explore Services</span></a>
-                <a className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="/partner-with-us"><ButtonLordIcon src="https://cdn.lordicon.com/abwrkdvl.json" /><span>Partner With Us</span></a>
-                <a className="watch-link modern-watch-link" href="#projects">
+                <Link className="primary-btn modern-action-btn magnetic-btn" href="/#contact"><ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" /><span>Get Started</span></Link>
+                <Link className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="/#services"><ButtonLordIcon src="https://cdn.lordicon.com/cnpvyndp.json" /><span>Explore Services</span></Link>
+                <Link className="secondary-btn modern-action-btn modern-action-btn-light magnetic-btn" href="/partner-with-us"><ButtonLordIcon src="https://cdn.lordicon.com/abwrkdvl.json" /><span>Partner With Us</span></Link>
+                <Link className="watch-link modern-watch-link" href="/#projects">
                   <span className="play-orbit"><ButtonLordIcon src="https://cdn.lordicon.com/slduhdil.json" /></span>
                   <span>Watch Video</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -314,8 +312,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          <FooterList title="Quick Links" items={["Home", "About Us", "Services", "Projects", "Join Our Bid List", "Our Process", "Contact"]} />
-          <FooterList title="Services" items={["Residential Construction", "Commercial Construction", "Land Development", "Design & Build", "Project Management"]} />
+          <FooterList title="Quick Links" items={[
+            { label: "Home", href: "/#home" },
+            { label: "Partner With Us", href: "/partner-with-us" },
+            { label: "Services", href: "/#services" },
+            { label: "Projects", href: "/#projects" },
+            { label: "Join Our Bid List", href: "/#bid-list" },
+            { label: "Contact", href: "/#contact" },
+          ]} />
+          <FooterList title="Services" items={["Residential Construction", "Commercial Construction", "Land Development", "Design & Build", "Project Management"].map((label) => ({ label, href: "/#services" }))} />
 
           <div>
             <h3 className="footer-title">Contact Info</h3>
@@ -335,13 +340,13 @@ export default function HomePage() {
   );
 }
 
-function FooterList({ title, items }: { title: string; items: string[] }) {
+function FooterList({ title, items }: { title: string; items: { label: string; href: string }[] }) {
   return (
     <div>
       <h3 className="footer-title">{title}</h3>
       <ul className="image-match-footer-links">
         {items.map((item) => (
-          <li key={item}><a href="#">{item}</a></li>
+          <li key={item.label}><Link href={item.href}>{item.label}</Link></li>
         ))}
       </ul>
     </div>
