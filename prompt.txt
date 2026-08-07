@@ -84,3 +84,6 @@ reference prompt 020:
 
 reference prompt 021:
     refactor: update ButtonLordIcon to include target prop and enhance hover effects in ProjectGallery
+
+reference prompt 022:
+    enhance partner card hover effects and transitions
