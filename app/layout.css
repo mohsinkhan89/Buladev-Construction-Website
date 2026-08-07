@@ -270,15 +270,6 @@
   line-height: 1.75;
 }
 
-.partner-footer-copy::after {
-  content: "";
-  display: block;
-  width: 3.8rem;
-  height: 2px;
-  margin-top: 1.6rem;
-  background: #f57216;
-}
-
 @media (max-width: 1180px) {
   .partner-page .site-header-inner > nav {
     gap: 0.68rem;

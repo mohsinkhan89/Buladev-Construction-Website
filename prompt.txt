@@ -93,3 +93,6 @@ reference prompt 023:
 
 reference prompt 024:
     fix partner page cards hover & some more little bit changes
+
+reference prompt 025:
+    remove unnecessary footer separator from partner page
