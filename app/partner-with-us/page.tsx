@@ -75,7 +75,7 @@ function ButtonLordIcon({
     trigger: "loop-on-hover",
     target,
     delay: "120",
-    colors: light ? "primary:#ffffff,secondary:#fed7aa" : "primary:#071018,secondary:#f57216",
+    colors: light ? "primary:#ffffff,secondary:#fed7aa" : "primary:#f57216,secondary:#f57216",
     className: "button-lord-icon",
     style: { width: "20px", height: "20px" } as CSSProperties,
   });

@@ -87,3 +87,9 @@ reference prompt 021:
 
 reference prompt 022:
     enhance partner card hover effects and transitions
+
+reference prompt 023:
+    fix: update button color scheme for light mode
+
+reference prompt 024:
+    fix partner page cards hover & some more little bit changes
