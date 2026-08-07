@@ -61,10 +61,19 @@ function LogoWhite() {
   );
 }
 
-function ButtonLordIcon({ src, light = true }: { src: string; light?: boolean }) {
+function ButtonLordIcon({
+  src,
+  light = true,
+  target = ".modern-action-btn",
+}: {
+  src: string;
+  light?: boolean;
+  target?: string;
+}) {
   return createElement("lord-icon", {
     src,
     trigger: "loop-on-hover",
+    target,
     delay: "120",
     colors: light ? "primary:#ffffff,secondary:#fed7aa" : "primary:#071018,secondary:#f57216",
     className: "button-lord-icon",
@@ -76,6 +85,7 @@ function CardLordIcon({ src }: { src: string }) {
   return createElement("lord-icon", {
     src,
     trigger: "loop-on-hover",
+    target: ".partner-card",
     delay: "160",
     colors: "primary:#ffffff,secondary:#fed7aa",
     className: "partner-card-lord-icon",
@@ -173,9 +183,13 @@ export default function PartnerWithUsPage() {
                     <CardLordIcon src={card.icon} />
                   </div>
                   <h2>{card.title}</h2>
-                  <Link href={card.href}>
+                  <Link className="partner-card-learn-more" href={card.href}>
                     <span>Learn More</span>
-                    <ButtonLordIcon src="https://cdn.lordicon.com/zmkotitn.json" light={false} />
+                    <ButtonLordIcon
+                      src="https://cdn.lordicon.com/zmkotitn.json"
+                      light={false}
+                      target=".partner-card-learn-more"
+                    />
                   </Link>
                 </div>
               </article>

@@ -1,0 +1,70 @@
+ ⨯ Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\server\webpack-runtime.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\server\app\_not-found\page.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\require.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\load-components.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\build\utils.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\lib\router-server.js
+- D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\lib\start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1420:15)
+    at D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)
+    at Module._load (node:internal/modules/cjs/loader:1226:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:244:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1503:12)
+    at mod.require (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at __webpack_require__.f.require (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\server\webpack-runtime.js:198:28)
+    at D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\server\webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\server\webpack-runtime.js:162:22)
+    at D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\server\app\_not-found\page.js:130:47
+    at Object.<anonymous> (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\server\app\_not-found\page.js:133:3)
+    at Module._compile (node:internal/modules/cjs/loader:1760:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:244:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1503:12)
+    at mod.require (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at requirePage (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\require.js:109:84)
+    at D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\load-components.js:103:84
+    at async loadComponentsImpl (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\next-server.js:714:36)
+    at async DevServer.findPageComponents (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\dev\next-dev-server.js:577:20)
+    at async DevServer.renderErrorToResponseImpl (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\base-server.js:2090:30)
+    at async DevServer.pipeImpl (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\next-server.js:231:21)
+    at async DevServer.handleRequestImpl (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\base-server.js:818:17)
+    at async D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\lib\router-server.js:179:21)
+    at async handleRequest (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\lib\router-server.js:359:24)
+    at async requestHandlerImpl (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\lib\router-server.js:383:13)
+    at async Server.requestListener (D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\.next\\server\\webpack-runtime.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\.next\\server\\app\\_not-found\\page.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\Freelancer Clients Folders\\Freelance Html Templates\\Buladev Project\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.

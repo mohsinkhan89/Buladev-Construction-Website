@@ -78,3 +78,6 @@ reference prompt 018:
 
 reference prompt 019:
     adjust min-height of partner card grid from 9rem to 8rem
+
+reference prompt 020:
+    refactor: enhance ButtonLordIcon and CardLordIcon components with target prop
