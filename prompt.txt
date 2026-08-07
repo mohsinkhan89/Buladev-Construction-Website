@@ -72,3 +72,6 @@ reference prompt 016:
 
 reference prompt 017:
     refactor: update partner-hero styles for improved layout and remove unused styles
+
+reference prompt 018:
+    update partner titles to reflect Buladev branding

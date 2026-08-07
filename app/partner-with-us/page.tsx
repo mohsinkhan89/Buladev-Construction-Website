@@ -15,13 +15,13 @@ const navItems = [
 
 const partnerCards = [
   {
-    title: "Partner with Gilbane Building",
+    title: "Partner with Buladev Building",
     image: "/img/partners/partner-building.png",
     href: "/#bid-list",
     icon: "https://cdn.lordicon.com/abwrkdvl.json",
   },
   {
-    title: "Partner with Gilbane Development",
+    title: "Partner with Buladev Development",
     image: "/img/partners/partner-development.png",
     href: "/#bid-list",
     icon: "https://cdn.lordicon.com/wloilxuq.json",

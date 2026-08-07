@@ -12,3 +12,7 @@
  ✓ Compiled /partner-with-us in 6.1s (559 modules)
  GET /partner-with-us 200 in 2398ms
  GET / 200 in 6441ms
+ GET / 200 in 313ms
+ ✓ Compiled in 2.1s (289 modules)
+ ✓ Compiled in 333ms (289 modules)
+ ✓ Compiled in 259ms (289 modules)
