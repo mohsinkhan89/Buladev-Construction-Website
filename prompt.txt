@@ -130,3 +130,6 @@ reference prompt 033:
 
 reference prompt 034:
     update project-image height and add specific height for about-intro-image
+
+reference prompt 035:
+    update layout and globals styles for responsive design adjustments

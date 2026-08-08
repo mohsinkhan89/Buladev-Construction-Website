@@ -835,8 +835,11 @@
   }
 
   .about-stats-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-top: 2rem;
+  }
+  .stat-card::before {
+    inset: 0px 15px;
   }
 
   .about-stat-card.stat-card::after {
@@ -2070,7 +2073,7 @@
 
   .services-card-grid,
   .services-reasons {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .services-card-body p {
