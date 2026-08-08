@@ -115,3 +115,6 @@ reference prompt 028:
 
 reference prompt 029:
     Add contact map location card with styling adjustments
+
+reference prompt 030:
+    update contact map to use Google Maps iframe and adjust styles

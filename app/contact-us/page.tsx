@@ -196,19 +196,14 @@ export default function ContactUsPage() {
             </a>
           </article>
 
-          <div className="contact-map-panel project-image-wrap" aria-label="Map showing BULADEV office location">
-            <div className="contact-map-grid" />
-            <div className="contact-map-roads" />
-            <div className="contact-map-pin">
-              <MapPin className="h-7 w-7" />
-            </div>
-            <div className="contact-map-location-card">
-              <strong>Kobe, Hyogo, Japan</strong>
-              <span>Temporary office location</span>
-            </div>
-            <span className="contact-map-label contact-map-label-one">Kobe Center</span>
-            <span className="contact-map-label contact-map-label-two">Hyogo Area</span>
-            <span className="contact-map-label contact-map-label-three">Port District</span>
+          <div className="contact-map-panel project-image-wrap" aria-label="Map showing Kobe, Hyogo, Japan">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209786.6391080841!2d134.94225685808198!3d34.75770281774351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60007d812aed89d9%3A0xc7126106c2f670f4!2sKobe%2C%20Hyogo%2C%20Japan!5e0!3m2!1sen!2s!4v1786188433806!5m2!1sen!2s"
+              title="Kobe, Hyogo, Japan map"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
           </div>
         </div>
       </section>
@@ -299,6 +294,7 @@ function FooterTextList({ title, items }: { title: string; items: string[] }) {
     </div>
   );
 }
+
 
 
 
