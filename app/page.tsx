@@ -13,7 +13,7 @@ const navItems = [
   { label: "Services", href: "/#services" },
   { label: "Projects", href: "/#projects" },
   { label: "Bid List", href: "/#bid-list", featured: true },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact-us" },
 ];
 
 const services = [
@@ -330,7 +330,7 @@ export default function HomePage() {
             { label: "Services", href: "/#services" },
             { label: "Projects", href: "/#projects" },
             { label: "Join Our Bid List", href: "/#bid-list" },
-            { label: "Contact", href: "/#contact" },
+            { label: "Contact", href: "/contact-us" },
           ]} />
           <FooterList title="Services" items={["Residential Construction", "Commercial Construction", "Land Development", "Design & Build", "Project Management"].map((label) => ({ label, href: "/#services" }))} />
 
@@ -364,6 +364,7 @@ function FooterList({ title, items }: { title: string; items: { label: string; h
     </div>
   );
 }
+
 
 
 

@@ -102,3 +102,13 @@ reference prompt 026:
 
 reference prompt 027:
     update images and styles for About Us page
+
+reference prompt 028:
+    feat: Update contact page and related components
+
+    - Changed contact link references from "/#contact" to "/contact-us" in navigation and footer across multiple pages.
+    - Added new Contact Us page with a form for user inquiries.
+    - Implemented API endpoint for handling contact requests and storing them in the database.
+    - Created a new database table for contact requests.
+    - Added styles for the new contact page and form.
+    - Included a hero banner image for the contact page.

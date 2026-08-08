@@ -2,20 +2,15 @@ import Link from "next/link";
 import { createElement, type CSSProperties } from "react";
 import StickyHeaderState from "../StickyHeaderState";
 import ScrollReveal from "../ScrollReveal";
+import ContactForm from "./ContactForm";
 import {
   ArrowRight,
-  Award,
-  BadgeCheck,
+  Building2,
   Clock,
-  Eye,
-  HardHat,
   Home,
   Mail,
   MapPin,
   Phone,
-  ShieldCheck,
-  Target,
-  UserCheck,
 } from "lucide-react";
 
 const navItems = [
@@ -46,11 +41,11 @@ const services = [
   "Project Management",
 ];
 
-const aboutStats = [
-  { label: "Years of Experience", value: "20+", icon: Award },
-  { label: "Licensed & Insured", value: "Trusted", icon: ShieldCheck },
-  { label: "Lean Six Sigma Certified", value: "Certified", icon: BadgeCheck },
-  { label: "Professional Project Managers", value: "Expert", icon: UserCheck },
+const contactItems = [
+  { label: "Call Us", value: "(313) 444-9734", href: "tel:3134449734", icon: Phone },
+  { label: "Email Us", value: "bula@BULADEV.com", href: "mailto:bula@buladev.com", icon: Mail },
+  { label: "Our Office", value: "Kobe, Hyogo, Japan", href: "#office", icon: MapPin },
+  { label: "Business Hours", value: "Mon - Fri: 8:00 AM - 5:00 PM", href: "#office", icon: Clock },
 ];
 
 function LogoBlock() {
@@ -89,9 +84,9 @@ function ButtonLordIcon({
   });
 }
 
-export default function AboutUsPage() {
+export default function ContactUsPage() {
   return (
-    <main className="about-page site-canvas min-h-screen text-coal">
+    <main className="contact-page site-canvas min-h-screen text-coal">
       <StickyHeaderState />
       <ScrollReveal />
 
@@ -104,7 +99,7 @@ export default function AboutUsPage() {
           <nav className="hidden items-center gap-5 lg:flex">
             {navItems.map((item) => (
               <Link
-                className={`nav-link ${item.label === "About" ? "active" : ""} ${item.featured ? "nav-link-bid" : ""}`}
+                className={`nav-link ${item.label === "Contact" ? "active" : ""} ${item.featured ? "nav-link-bid" : ""}`}
                 href={item.href}
                 key={item.label}
               >
@@ -113,13 +108,13 @@ export default function AboutUsPage() {
             ))}
           </nav>
 
-          <Link className="header-cta modern-action-btn magnetic-btn" href="/#contact">
+          <Link className="header-cta modern-action-btn magnetic-btn" href="/contact-us">
             <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
             <span>Request Consultation</span>
           </Link>
 
-          <input className="mobile-menu-check" id="about-mobile-menu-toggle" type="checkbox" />
-          <label className="mobile-menu-button" htmlFor="about-mobile-menu-toggle" aria-label="Open menu">
+          <input className="mobile-menu-check" id="contact-mobile-menu-toggle" type="checkbox" />
+          <label className="mobile-menu-button" htmlFor="contact-mobile-menu-toggle" aria-label="Open menu">
             <span />
             <span />
             <span />
@@ -131,7 +126,7 @@ export default function AboutUsPage() {
                 <Link href={item.href} key={item.label}>{item.label === "Bid List" ? "Join Our Bid List" : item.label}</Link>
               ))}
             </nav>
-            <Link className="mobile-menu-cta modern-action-btn magnetic-btn" href="/#contact">
+            <Link className="mobile-menu-cta modern-action-btn magnetic-btn" href="/contact-us">
               <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
               <span>Request Consultation</span>
             </Link>
@@ -139,99 +134,86 @@ export default function AboutUsPage() {
         </div>
       </header>
 
-      <section className="about-hero">
-        <div className="about-hero-inner mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="about-breadcrumb" aria-label="Breadcrumb">
+      <section className="contact-hero">
+        <div className="contact-hero-inner mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="contact-breadcrumb" aria-label="Breadcrumb">
             <Link href="/#home">
               <Home className="h-4 w-4" />
               <span>Home</span>
             </Link>
-            <span className="about-breadcrumb-divider">/</span>
-            <span>About Us</span>
+            <span className="contact-breadcrumb-divider">/</span>
+            <span>Contact Us</span>
           </div>
 
-          <div className="about-hero-copy">
-            <h1 className="about-hero-title hero-title">
-              About
+          <div className="contact-hero-copy">
+            <h1 className="contact-hero-title hero-title">
+              Contact
               <span>Us.</span>
             </h1>
-            <div className="about-hero-rule" />
+            <div className="contact-hero-rule" />
             <p>
-              BULADEV Building & Land Development and ASA Construction LLC deliver innovative,
-              sustainable, and high-quality construction and development solutions.
+              We&apos;re here to help and answer any question you might have. We look forward to hearing from you.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="about-intro-section">
-        <div className="about-intro-grid mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="about-image-frame project-image-wrap">
-            <img
-              className="about-intro-image project-image"
-              src="/img/aboutus/woweare-img.png"
-              alt="Modern commercial building developed by BULADEV"
-            />
-          </div>
+      <section className="contact-main-section">
+        <div className="contact-main-grid mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <aside className="contact-info-panel section-heading">
+            <p className="contact-kicker">Get In Touch</p>
+            <h2>Let&apos;s Talk About Your Project.</h2>
+            <p>Fill out the form and our team will get back to you as soon as possible.</p>
 
-          <div className="section-heading about-section-heading">
-            <p className="about-kicker">Who We Are</p>
-            <h2>
-              Builders, Developers, and Project <span>Partners.</span>
-            </h2>
-            <p>
-              We are builders, developers, and professional project managers dedicated to delivering
-              innovative, sustainable, and high-quality construction and development solutions.
-            </p>
-            <p>
-              With 20 years of experience, licensed and insured services, Lean Six Sigma certified
-              practices, and a skilled team, we help clients turn ideas into real, lasting results.
-            </p>
-          </div>
-        </div>
+            <div className="contact-info-list">
+              {contactItems.map(({ label, value, href, icon: Icon }) => (
+                <a className="contact-info-item service-card" href={href} key={label}>
+                  <span className="contact-info-icon"><Icon className="h-5 w-5" /></span>
+                  <span>
+                    <strong>{label}</strong>
+                    <em>{value}</em>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </aside>
 
-        <div className="about-stats-row mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {aboutStats.map(({ label, value, icon: Icon }) => (
-            <article className="about-stat-card stat-card" key={label}>
-              <Icon className="about-stat-icon" aria-hidden="true" />
-              <strong>{value}</strong>
-              <span>{label}</span>
-            </article>
-          ))}
+          <ContactForm />
         </div>
       </section>
 
-      <section className="about-values-section">
-        <div className="about-values-grid mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <article className="about-value-card service-card">
-            <Target className="about-value-icon" aria-hidden="true" />
-            <h2>Our Mission</h2>
-            <p>
-              To deliver exceptional construction and development services that enhance communities
-              and create value for generations.
-            </p>
+      <section className="contact-office-section" id="office">
+        <div className="contact-office-grid mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <article className="contact-office-card service-card">
+            <Building2 className="contact-office-icon" aria-hidden="true" />
+            <h2>Our Head Office</h2>
+            <div className="contact-office-rule" />
+            <p>Kobe, Hyogo, Japan</p>
+            <p>Visit our office or give us a call to discuss how we can bring your vision to life.</p>
+            <a className="contact-directions modern-action-btn magnetic-btn" href="https://maps.google.com/?q=Kobe%2C%20Hyogo%2C%20Japan">
+              <MapPin className="h-4 w-4" />
+              <span>Get Directions</span>
+            </a>
           </article>
 
-          <article className="about-value-card service-card">
-            <Eye className="about-value-icon" aria-hidden="true" />
-            <h2>Our Vision</h2>
-            <p>
-              To be a leading construction and development company recognized for innovation,
-              integrity, and long-term impact.
-            </p>
-          </article>
+          <div className="contact-map-panel project-image-wrap" aria-label="Map showing BULADEV office location">
+            <div className="contact-map-grid" />
+            <div className="contact-map-roads" />
+            <div className="contact-map-pin">
+              <MapPin className="h-7 w-7" />
+            </div>
+            <span className="contact-map-label contact-map-label-one">Kobe Center</span>
+            <span className="contact-map-label contact-map-label-two">Hyogo Area</span>
+            <span className="contact-map-label contact-map-label-three">Port District</span>
+          </div>
         </div>
       </section>
 
-      <section className="about-cta-section px-4 pb-12 sm:px-6 lg:px-8" id="contact">
+      <section className="contact-cta-section px-4 pb-12 sm:px-6 lg:px-8">
         <div className="cta-band image-match-cta mx-auto max-w-7xl text-white">
-          <div className="about-cta-icon" aria-hidden="true">
-            <HardHat className="h-8 w-8" />
-          </div>
-
           <div className="image-match-cta-copy">
-            <h2>Ready to Build Your Vision?</h2>
-            <p>Let&apos;s work together to turn your ideas into reality.</p>
+            <h2>Have a project in mind?</h2>
+            <p>Let&apos;s build something great together.</p>
           </div>
 
           <div className="image-match-cta-actions">
@@ -256,7 +238,7 @@ export default function AboutUsPage() {
               <LogoBlock />
             </div>
 
-            <p className="about-footer-copy">
+            <p className="contact-footer-copy">
               Building more than structures - we build relationships, communities, and a better future.
             </p>
 
@@ -275,7 +257,7 @@ export default function AboutUsPage() {
             <ul className="image-match-contact-list">
               <li><Phone className="h-4 w-4" /><a href="tel:3134449734">(313) 444-9734</a></li>
               <li><Mail className="h-4 w-4" /><a href="mailto:bula@buladev.com">bula@BULADEV.com</a></li>
-              <li><MapPin className="h-4 w-4" /><span>Detroit, Michigan</span></li>
+              <li><MapPin className="h-4 w-4" /><span>Kobe, Hyogo, Japan</span></li>
               <li><Clock className="h-4 w-4" /><span>Mon - Fri: 8:00 AM - 5:00 PM</span></li>
             </ul>
           </div>

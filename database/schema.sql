@@ -32,3 +32,20 @@ CREATE TABLE IF NOT EXISTS bid_list_submissions (
   KEY bid_list_submissions_status_index (status),
   KEY bid_list_submissions_created_at_index (created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS contact_requests (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(190) NOT NULL,
+  phone VARCHAR(60) NULL,
+  subject VARCHAR(180) NOT NULL,
+  message TEXT NOT NULL,
+  status VARCHAR(40) NOT NULL DEFAULT 'new',
+  source_page VARCHAR(80) NOT NULL DEFAULT 'contact-us',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY contact_requests_email_index (email),
+  KEY contact_requests_status_index (status),
+  KEY contact_requests_created_at_index (created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

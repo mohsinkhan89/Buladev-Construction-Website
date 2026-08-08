@@ -11,7 +11,7 @@ const navItems = [
   { label: "Services", href: "/#services" },
   { label: "Projects", href: "/#projects" },
   { label: "Bid List", href: "/#bid-list", featured: true },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact-us" },
 ];
 
 const partnerCards = [
@@ -36,7 +36,7 @@ const footerQuickLinks = [
   { label: "Services", href: "/#services" },
   { label: "Projects", href: "/#projects" },
   { label: "Join Our Bid List", href: "/#bid-list" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact-us" },
 ];
 
 const services = [
@@ -286,4 +286,5 @@ function FooterTextList({ title, items }: { title: string; items: string[] }) {
     </div>
   );
 }
+
 
