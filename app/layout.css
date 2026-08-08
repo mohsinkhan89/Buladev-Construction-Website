@@ -389,7 +389,7 @@
   z-index: -3;
   background:
     linear-gradient(90deg, rgba(7, 16, 24, 0.97) 0%, rgba(7, 16, 24, 0.88) 33%, rgba(7, 16, 24, 0.36) 68%, rgba(7, 16, 24, 0.76) 100%),
-    url("/img/partners/hero-img.png") center right / cover no-repeat;
+    url("/img/aboutus/hero-banner.png") center right / cover no-repeat;
 }
 
 .about-hero::after {
@@ -771,7 +771,7 @@
   .about-hero::before {
     background:
       linear-gradient(90deg, rgba(7, 16, 24, 0.98), rgba(7, 16, 24, 0.78)),
-      url("/img/partners/hero-img.png") center / cover no-repeat;
+      url("/img/aboutus/hero-banner.png") center / cover no-repeat;
   }
 
   .about-hero-title.hero-title {
@@ -870,4 +870,55 @@
     min-height: 13rem;
     padding: 1.65rem 1.2rem;
   }
+}
+
+
+
+
+/* About page footer should match the home page white footer */
+.about-page .image-match-footer {
+  border-top: 1px solid rgba(245, 114, 22, 0.28);
+  background: #f7f8fa;
+  color: #071018;
+}
+
+.about-page .image-match-footer .footer-title {
+  color: #071018;
+}
+
+.about-page .image-match-footer-links,
+.about-page .image-match-contact-list {
+  color: #27272a;
+}
+
+.about-page .image-match-footer-links a,
+.about-page .image-match-contact-list a {
+  color: inherit;
+}
+
+.about-page .image-match-footer-links a:hover,
+.about-page .image-match-contact-list a:hover {
+  color: #f57216;
+}
+
+.about-page .image-match-footer-copy {
+  border-top-color: rgb(242 107 19 / 50%);
+}
+
+.about-page .image-match-footer-copy p {
+  color: #52525b;
+}
+
+.about-page .image-match-socials a {
+  background: #071018;
+  color: #ffffff;
+}
+
+.about-page .image-match-socials a:hover {
+  background: #f57216;
+  color: #ffffff;
+}
+
+.about-footer-copy {
+  color: #071018;
 }

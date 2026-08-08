@@ -99,3 +99,6 @@ reference prompt 025:
 
 reference prompt 026:
     Add About Us page layout and navigation links
+
+reference prompt 027:
+    update images and styles for About Us page

@@ -56,7 +56,7 @@ const aboutStats = [
 function LogoBlock() {
   return (
     <Link className="logo-block" href="/#home" aria-label="BULADEV home">
-      <img className="logo-image" src="/img/logo/logo.png" alt="BULADEV Building & Land Development" />
+      <img className="logo-image" src="/img/logo/logo-black.png" alt="BULADEV Building & Land Development" />
     </Link>
   );
 }
@@ -169,7 +169,7 @@ export default function AboutUsPage() {
           <div className="about-image-frame project-image-wrap">
             <img
               className="about-intro-image project-image"
-              src="/img/partners/partner-building.png"
+              src="/img/aboutus/woweare-img.png"
               alt="Modern commercial building developed by BULADEV"
             />
           </div>
@@ -313,3 +313,6 @@ function FooterTextList({ title, items }: { title: string; items: string[] }) {
     </div>
   );
 }
+
+
+
