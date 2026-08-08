@@ -127,3 +127,6 @@ reference prompt 032:
 
 reference prompt 033:
     update images and refine typography for About Us and Services pages
+
+reference prompt 034:
+    update project-image height and add specific height for about-intro-image
