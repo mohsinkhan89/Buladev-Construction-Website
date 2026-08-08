@@ -2071,7 +2071,9 @@
     padding-top: 2.4rem;
   }
 
-  .services-card-grid,
+  .services-card-grid {
+    grid-template-columns: 1fr;
+  }
   .services-reasons {
     grid-template-columns: 1fr 1fr;
   }
@@ -2136,6 +2138,10 @@
 }
 
 @media (max-width: 640px) {
+  .image-match-footer .footer-title {
+    font-size: 1.5rem;
+  }
+  .services-why-copy h2,
   .site-canvas .section-heading h2,
   .about-section-heading h2,
   .services-section-heading h2 {

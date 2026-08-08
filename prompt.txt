@@ -133,3 +133,6 @@ reference prompt 034:
 
 reference prompt 035:
     update layout and globals styles for responsive design adjustments
+
+reference prompt 036:
+    update layout styles for services card grid and footer title responsiveness
