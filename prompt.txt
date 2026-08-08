@@ -96,3 +96,6 @@ reference prompt 024:
 
 reference prompt 025:
     remove unnecessary footer separator from partner page
+
+reference prompt 026:
+    Add About Us page layout and navigation links

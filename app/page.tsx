@@ -8,6 +8,7 @@ import { CheckCircle2, ClipboardCheck, FileText, MapPin, Phone } from "lucide-re
 
 const navItems = [
   { label: "Home", href: "/#home" },
+  { label: "About", href: "/about-us" },
   { label: "Partner With Us", href: "/partner-with-us" },
   { label: "Services", href: "/#services" },
   { label: "Projects", href: "/#projects" },
@@ -324,6 +325,7 @@ export default function HomePage() {
 
           <FooterList title="Quick Links" items={[
             { label: "Home", href: "/#home" },
+            { label: "About Us", href: "/about-us" },
             { label: "Partner With Us", href: "/partner-with-us" },
             { label: "Services", href: "/#services" },
             { label: "Projects", href: "/#projects" },
@@ -362,6 +364,8 @@ function FooterList({ title, items }: { title: string; items: { label: string; h
     </div>
   );
 }
+
+
 
 
 

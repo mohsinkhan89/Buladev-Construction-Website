@@ -68,3 +68,4 @@ Require stack:
   ]
 }
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\cache\webpack\client-development\8.pack.gz_' -> 'D:\Freelancer Clients Folders\Freelance Html Templates\Buladev Project\.next\cache\webpack\client-development\8.pack.gz'
