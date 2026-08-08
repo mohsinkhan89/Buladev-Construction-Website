@@ -202,6 +202,10 @@ export default function ContactUsPage() {
             <div className="contact-map-pin">
               <MapPin className="h-7 w-7" />
             </div>
+            <div className="contact-map-location-card">
+              <strong>Kobe, Hyogo, Japan</strong>
+              <span>Temporary office location</span>
+            </div>
             <span className="contact-map-label contact-map-label-one">Kobe Center</span>
             <span className="contact-map-label contact-map-label-two">Hyogo Area</span>
             <span className="contact-map-label contact-map-label-three">Port District</span>
@@ -295,6 +299,8 @@ function FooterTextList({ title, items }: { title: string; items: string[] }) {
     </div>
   );
 }
+
+
 
 
 

@@ -1360,6 +1360,10 @@ video {
     transform: translateX(-50%);
     background: linear-gradient(90deg, transparent, #f57216, transparent);
   }
+
+.contact-form-heading.section-heading h2::after {
+  left: 10%;
+}
 .section-heading p {
     margin-top: 1rem;
   }

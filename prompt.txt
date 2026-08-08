@@ -112,3 +112,6 @@ reference prompt 028:
     - Created a new database table for contact requests.
     - Added styles for the new contact page and form.
     - Included a hero banner image for the contact page.
+
+reference prompt 029:
+    Add contact map location card with styling adjustments

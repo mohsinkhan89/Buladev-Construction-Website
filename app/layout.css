@@ -1575,3 +1575,54 @@
     width: min(100%, 80rem);
   }
 }
+
+.contact-form-heading h2::after {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.contact-map-location-card {
+  position: absolute;
+  left: calc(50% + 2.2rem);
+  top: 49%;
+  z-index: 2;
+  min-width: 12rem;
+  border: 1px solid rgba(7, 16, 24, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.72rem 0.9rem;
+  color: #071018;
+  box-shadow: 0 14px 34px rgba(7, 16, 24, 0.16);
+  transform: translateY(-50%);
+}
+
+.contact-map-location-card strong,
+.contact-map-location-card span {
+  display: block;
+}
+
+.contact-map-location-card strong {
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.contact-map-location-card span {
+  margin-top: 0.28rem;
+  color: #f57216;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .contact-map-location-card {
+    left: 50%;
+    top: 64%;
+    width: min(calc(100% - 2rem), 15rem);
+    min-width: 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
