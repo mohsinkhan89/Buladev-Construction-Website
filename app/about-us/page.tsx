@@ -222,10 +222,6 @@ export default function AboutUsPage() {
 
       <section className="about-cta-section px-4 pb-12 sm:px-6 lg:px-8" id="contact">
         <div className="cta-band image-match-cta mx-auto max-w-7xl text-white">
-          <div className="about-cta-icon" aria-hidden="true">
-            <HardHat className="h-8 w-8" />
-          </div>
-
           <div className="image-match-cta-copy">
             <h2>Ready to Build Your Vision?</h2>
             <p>Let&apos;s work together to turn your ideas into reality.</p>

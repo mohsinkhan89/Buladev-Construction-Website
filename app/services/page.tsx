@@ -257,10 +257,6 @@ export default function ServicesPage() {
 
       <section className="services-cta-section px-4 pb-12 sm:px-6 lg:px-8">
         <div className="cta-band image-match-cta mx-auto max-w-7xl text-white">
-          <div className="services-cta-icon" aria-hidden="true">
-            <HardHat className="h-8 w-8" />
-          </div>
-
           <div className="image-match-cta-copy">
             <h2>Ready to Start Your Project?</h2>
             <p>Let&apos;s build something great together.</p>

@@ -57,25 +57,25 @@ const projects = [
     title: "Modern Luxury Home",
     category: "Residential Construction",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85",
+      "./img/home/modern-luxury-home.png",
   },
   {
     title: "Corporate Office Building",
     category: "Commercial Construction",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85",
+      "./img/home/corporate-office-building.png",
   },
   {
     title: "Land Development Project",
     category: "Land Development",
     image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85",
+      "./img/home/land-development-project.png",
   },
   {
     title: "Retail Build-Out",
     category: "Commercial Construction",
     image:
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85",
+      "./img/home/corporate-office-building.png",
   },
 ];
 

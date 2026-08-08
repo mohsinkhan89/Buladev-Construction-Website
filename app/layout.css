@@ -2082,3 +2082,75 @@
     border-left: 0;
   }
 }
+
+/* Shared public-page typography scale */
+.site-canvas .section-heading h2,
+.about-section-heading h2,
+.services-section-heading h2 {
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.site-canvas .section-heading > p,
+.about-section-heading > p:not(.about-kicker),
+.services-section-heading > p:not(.services-kicker),
+.contact-info-panel > p:not(.contact-kicker),
+.contact-office-card p,
+.services-card-body p,
+.services-why-copy p,
+.about-value-card p,
+.partner-hero-copy p,
+.contact-hero-copy p,
+.services-hero-copy p {
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.service-card h3,
+.project-card h3,
+.services-card-body h3 {
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.contact-form-heading h2,
+.contact-office-card h2,
+.services-why-copy h2,
+.about-value-card h2,
+.partner-card h2 {
+  font-family: "Rajdhani", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+@media (max-width: 640px) {
+  .site-canvas .section-heading h2,
+  .about-section-heading h2,
+  .services-section-heading h2 {
+    font-size: clamp(1.75rem, 9vw, 2.35rem);
+  }
+
+  .site-canvas .section-heading > p,
+  .about-section-heading > p:not(.about-kicker),
+  .services-section-heading > p:not(.services-kicker),
+  .contact-info-panel > p:not(.contact-kicker),
+  .contact-office-card p,
+  .services-card-body p,
+  .services-why-copy p,
+  .about-value-card p,
+  .partner-hero-copy p,
+  .contact-hero-copy p,
+  .services-hero-copy p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}

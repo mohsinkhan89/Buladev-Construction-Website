@@ -124,3 +124,6 @@ reference prompt 031:
 
 reference prompt 032:
     refactor: update About Us page layout and styles
+
+reference prompt 033:
+    update images and refine typography for About Us and Services pages
