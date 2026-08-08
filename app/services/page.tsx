@@ -6,15 +6,17 @@ import {
   ArrowRight,
   Award,
   BadgeCheck,
+  Building2,
+  CheckCircle2,
   Clock,
-  Eye,
+  DraftingCompass,
+  Handshake,
   HardHat,
   Home,
   Mail,
   MapPin,
   Phone,
   ShieldCheck,
-  Target,
   UserCheck,
 } from "lucide-react";
 
@@ -38,19 +40,60 @@ const footerQuickLinks = [
   { label: "Contact", href: "/contact-us" },
 ];
 
-const services = [
+const serviceLinks = [
   "Residential Construction",
   "Commercial Construction",
   "Land Development",
   "Design & Build",
   "Project Management",
+  "Consulting Services",
 ];
 
-const aboutStats = [
-  { label: "Years of Experience", value: "20+", icon: Award },
-  { label: "Licensed & Insured", value: "Trusted", icon: ShieldCheck },
-  { label: "Lean Six Sigma Certified", value: "Certified", icon: BadgeCheck },
-  { label: "Professional Project Managers", value: "Expert", icon: UserCheck },
+const serviceCards = [
+  {
+    title: "Residential Construction",
+    text: "Custom homes, renovations, additions, and property improvements built with quality, care, and attention to detail.",
+    image: "/img/services/residential-construction.png",
+    icon: Home,
+  },
+  {
+    title: "Commercial Construction",
+    text: "Offices, retail, build-outs, tenant improvements, and new construction for businesses of all sizes.",
+    image: "/img/services/commercial-construction.png",
+    icon: Building2,
+  },
+  {
+    title: "Land Development",
+    text: "Site development, land planning, utilities, grading, and infrastructure to transform land into value.",
+    image: "/img/services/land-development.png",
+    icon: MapPin,
+  },
+  {
+    title: "Design & Planning",
+    text: "Smart design solutions, feasibility planning, and value-engineered concepts to bring your vision to life.",
+    image: "/img/services/design-planning.png",
+    icon: DraftingCompass,
+  },
+  {
+    title: "Project Management",
+    text: "Professional project management with clear communication, scheduling, budgeting, and quality control.",
+    image: "/img/services/project-management.png",
+    icon: UserCheck,
+  },
+  {
+    title: "Consulting Services",
+    text: "Strategic advice and guidance for your construction and development needs from experienced professionals.",
+    image: "/img/services/consulting-services.png",
+    icon: Handshake,
+  },
+];
+
+const reasons = [
+  { label: "Licensed & Insured", icon: ShieldCheck },
+  { label: "20+ Years of Experience", icon: Award },
+  { label: "Lean Six Sigma Certified", icon: BadgeCheck },
+  { label: "Professional Project Managers", icon: UserCheck },
+  { label: "Quality, Safety & Timely Delivery", icon: CheckCircle2 },
 ];
 
 function LogoBlock() {
@@ -89,9 +132,9 @@ function ButtonLordIcon({
   });
 }
 
-export default function AboutUsPage() {
+export default function ServicesPage() {
   return (
-    <main className="about-page site-canvas min-h-screen text-coal">
+    <main className="services-page site-canvas min-h-screen text-coal">
       <StickyHeaderState />
       <ScrollReveal />
 
@@ -104,7 +147,7 @@ export default function AboutUsPage() {
           <nav className="hidden items-center gap-5 lg:flex">
             {navItems.map((item) => (
               <Link
-                className={`nav-link ${item.label === "About" ? "active" : ""} ${item.featured ? "nav-link-bid" : ""}`}
+                className={`nav-link ${item.label === "Services" ? "active" : ""} ${item.featured ? "nav-link-bid" : ""}`}
                 href={item.href}
                 key={item.label}
               >
@@ -113,13 +156,13 @@ export default function AboutUsPage() {
             ))}
           </nav>
 
-          <Link className="header-cta modern-action-btn magnetic-btn" href="/#contact">
+          <Link className="header-cta modern-action-btn magnetic-btn" href="/contact-us">
             <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
             <span>Request Consultation</span>
           </Link>
 
-          <input className="mobile-menu-check" id="about-mobile-menu-toggle" type="checkbox" />
-          <label className="mobile-menu-button" htmlFor="about-mobile-menu-toggle" aria-label="Open menu">
+          <input className="mobile-menu-check" id="services-mobile-menu-toggle" type="checkbox" />
+          <label className="mobile-menu-button" htmlFor="services-mobile-menu-toggle" aria-label="Open menu">
             <span />
             <span />
             <span />
@@ -131,7 +174,7 @@ export default function AboutUsPage() {
                 <Link href={item.href} key={item.label}>{item.label === "Bid List" ? "Join Our Bid List" : item.label}</Link>
               ))}
             </nav>
-            <Link className="mobile-menu-cta modern-action-btn magnetic-btn" href="/#contact">
+            <Link className="mobile-menu-cta modern-action-btn magnetic-btn" href="/contact-us">
               <ButtonLordIcon src="https://cdn.lordicon.com/oqdmuxru.json" />
               <span>Request Consultation</span>
             </Link>
@@ -139,99 +182,88 @@ export default function AboutUsPage() {
         </div>
       </header>
 
-      <section className="about-hero">
-        <div className="about-hero-inner mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="about-breadcrumb" aria-label="Breadcrumb">
+      <section className="services-hero">
+        <div className="services-hero-inner mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="services-breadcrumb" aria-label="Breadcrumb">
             <Link href="/#home">
               <Home className="h-4 w-4" />
               <span>Home</span>
             </Link>
-            <span className="about-breadcrumb-divider">/</span>
-            <span>About Us</span>
+            <span className="services-breadcrumb-divider">/</span>
+            <span>Services</span>
           </div>
 
-          <div className="about-hero-copy">
-            <h1 className="about-hero-title hero-title">
-              About
-              <span>Us.</span>
+          <div className="services-hero-copy">
+            <h1 className="services-hero-title hero-title">
+              Our
+              <span>Services.</span>
             </h1>
-            <div className="about-hero-rule" />
+            <div className="services-hero-rule" />
             <p>
-              BULADEV Building & Land Development and ASA Construction LLC deliver innovative,
-              sustainable, and high-quality construction and development solutions.
+              Comprehensive construction, development, and project management solutions built on experience, quality, and trust.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="about-intro-section">
-        <div className="about-intro-grid mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="about-image-frame project-image-wrap">
-            <img
-              className="about-intro-image project-image"
-              src="/img/aboutus/woweare-img.png"
-              alt="Modern commercial building developed by BULADEV"
-            />
-          </div>
-
-          <div className="section-heading about-section-heading">
-            <p className="about-kicker">Who We Are</p>
-            <h2>
-              Builders, Developers, and Project <span>Partners.</span>
-            </h2>
+      <section className="services-list-section">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="section-heading services-section-heading">
+            <p className="services-kicker">What We Do</p>
+            <h2>Complete Solutions for Every Stage of Your Project</h2>
             <p>
-              We are builders, developers, and professional project managers dedicated to delivering
-              innovative, sustainable, and high-quality construction and development solutions.
-            </p>
-            <p>
-              With 20 years of experience, licensed and insured services, Lean Six Sigma certified
-              practices, and a skilled team, we help clients turn ideas into real, lasting results.
+              From planning to completion, we deliver high-quality, safe, and efficient construction and development services for residential, commercial, and land projects.
             </p>
           </div>
-        </div>
 
-        <div className="about-stats-row mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {aboutStats.map(({ label, value, icon: Icon }) => (
-            <article className="about-stat-card stat-card" key={label}>
-              <Icon className="about-stat-icon" aria-hidden="true" />
-              <strong>{value}</strong>
-              <span>{label}</span>
-            </article>
-          ))}
+          <div className="services-card-grid">
+            {serviceCards.map(({ title, text, image, icon: Icon }) => (
+              <article className="services-card service-card" key={title}>
+                <div className="services-card-image-wrap project-image-wrap">
+                  <img className="services-card-image project-image" src={image} alt={title} />
+                  <span className="services-card-icon"><Icon className="h-8 w-8" /></span>
+                </div>
+                <div className="services-card-body">
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <Link className="services-card-link" href="/contact-us">
+                    <span>Learn More</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="about-values-section">
-        <div className="about-values-grid mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <article className="about-value-card service-card">
-            <Target className="about-value-icon" aria-hidden="true" />
-            <h2>Our Mission</h2>
-            <p>
-              To deliver exceptional construction and development services that enhance communities
-              and create value for generations.
-            </p>
-          </article>
+      <section className="services-why-section px-4 sm:px-6 lg:px-8">
+        <div className="services-why-grid mx-auto max-w-7xl">
+          <div className="services-why-copy">
+            <h2>Why Choose <span>BULADEV & ASA?</span></h2>
+            <p>We combine experience, planning, and quality to deliver projects that stand the test of time.</p>
+          </div>
 
-          <article className="about-value-card service-card">
-            <Eye className="about-value-icon" aria-hidden="true" />
-            <h2>Our Vision</h2>
-            <p>
-              To be a leading construction and development company recognized for innovation,
-              integrity, and long-term impact.
-            </p>
-          </article>
+          <div className="services-reasons">
+            {reasons.map(({ label, icon: Icon }) => (
+              <article className="services-reason stat-card" key={label}>
+                <Icon className="services-reason-icon" aria-hidden="true" />
+                <span>{label}</span>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="about-cta-section px-4 pb-12 sm:px-6 lg:px-8" id="contact">
+      <section className="services-cta-section px-4 pb-12 sm:px-6 lg:px-8">
         <div className="cta-band image-match-cta mx-auto max-w-7xl text-white">
-          <div className="about-cta-icon" aria-hidden="true">
+          <div className="services-cta-icon" aria-hidden="true">
             <HardHat className="h-8 w-8" />
           </div>
 
           <div className="image-match-cta-copy">
-            <h2>Ready to Build Your Vision?</h2>
-            <p>Let&apos;s work together to turn your ideas into reality.</p>
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let&apos;s build something great together.</p>
           </div>
 
           <div className="image-match-cta-actions">
@@ -241,7 +273,7 @@ export default function AboutUsPage() {
               </span>
               (313) 444-9734
             </a>
-            <a className="image-match-cta-button modern-action-btn magnetic-btn" href="mailto:bula@buladev.com">
+            <a className="image-match-cta-button modern-action-btn magnetic-btn" href="/contact-us">
               <span>Request Consultation</span>
               <ArrowRight className="h-4 w-4" />
             </a>
@@ -256,7 +288,7 @@ export default function AboutUsPage() {
               <LogoBlock />
             </div>
 
-            <p className="about-footer-copy">
+            <p className="services-footer-copy">
               Building more than structures - we build relationships, communities, and a better future.
             </p>
 
@@ -268,14 +300,14 @@ export default function AboutUsPage() {
           </div>
 
           <FooterList title="Quick Links" items={footerQuickLinks} />
-          <FooterTextList title="Our Services" items={services} />
+          <FooterTextList title="Our Services" items={serviceLinks} />
 
           <div>
             <h3 className="footer-title">Contact Info</h3>
             <ul className="image-match-contact-list">
               <li><Phone className="h-4 w-4" /><a href="tel:3134449734">(313) 444-9734</a></li>
               <li><Mail className="h-4 w-4" /><a href="mailto:bula@buladev.com">bula@BULADEV.com</a></li>
-              <li><MapPin className="h-4 w-4" /><span>Detroit, Michigan</span></li>
+              <li><MapPin className="h-4 w-4" /><span>Kobe, Hyogo, Japan</span></li>
               <li><Clock className="h-4 w-4" /><span>Mon - Fri: 8:00 AM - 5:00 PM</span></li>
             </ul>
           </div>
@@ -307,14 +339,9 @@ function FooterTextList({ title, items }: { title: string; items: string[] }) {
       <h3 className="footer-title">{title}</h3>
       <ul className="image-match-footer-links">
         {items.map((item) => (
-          <li key={item}><Link href="/#services">{item}</Link></li>
+          <li key={item}><Link href="/services">{item}</Link></li>
         ))}
       </ul>
     </div>
   );
 }
-
-
-
-
-

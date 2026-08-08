@@ -118,3 +118,6 @@ reference prompt 029:
 
 reference prompt 030:
     update contact map to use Google Maps iframe and adjust styles
+
+reference prompt 031:
+    update navigation links to point to the correct services path and add services page with corresponding layout and images

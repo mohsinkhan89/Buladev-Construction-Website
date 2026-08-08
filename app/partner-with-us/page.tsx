@@ -8,7 +8,7 @@ const navItems = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/about-us" },
   { label: "Partner With Us", href: "/partner-with-us" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "Projects", href: "/#projects" },
   { label: "Bid List", href: "/#bid-list", featured: true },
   { label: "Contact", href: "/contact-us" },
@@ -33,7 +33,7 @@ const footerQuickLinks = [
   { label: "Home", href: "/#home" },
   { label: "About Us", href: "/about-us" },
   { label: "Partner With Us", href: "/partner-with-us" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "Projects", href: "/#projects" },
   { label: "Join Our Bid List", href: "/#bid-list" },
   { label: "Contact", href: "/contact-us" },
@@ -286,5 +286,6 @@ function FooterTextList({ title, items }: { title: string; items: string[] }) {
     </div>
   );
 }
+
 
 
