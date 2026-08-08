@@ -6,12 +6,9 @@ import {
   ArrowRight,
   Award,
   BadgeCheck,
-  Clock,
   Eye,
   HardHat,
   Home,
-  Mail,
-  MapPin,
   Phone,
   ShieldCheck,
   Target,
@@ -256,10 +253,6 @@ export default function AboutUsPage() {
               <LogoBlock />
             </div>
 
-            <p className="about-footer-copy">
-              Building more than structures - we build relationships, communities, and a better future.
-            </p>
-
             <div className="image-match-socials" aria-label="Social media links">
               <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f" /></a>
               <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in" /></a>
@@ -267,16 +260,24 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          <FooterList title="Quick Links" items={footerQuickLinks} />
-          <FooterTextList title="Our Services" items={services} />
+          <FooterList title="Quick Links" items={[
+            { label: "Home", href: "/#home" },
+            { label: "About Us", href: "/about-us" },
+            { label: "Partner With Us", href: "/partner-with-us" },
+            { label: "Services", href: "/services" },
+            { label: "Projects", href: "/#projects" },
+            { label: "Join Our Bid List", href: "/#bid-list" },
+            { label: "Contact", href: "/contact-us" },
+          ]} />
+          <FooterList title="Services" items={["Residential Construction", "Commercial Construction", "Land Development", "Design & Build", "Project Management"].map((label) => ({ label, href: "/#services" }))} />
 
           <div>
             <h3 className="footer-title">Contact Info</h3>
             <ul className="image-match-contact-list">
-              <li><Phone className="h-4 w-4" /><a href="tel:3134449734">(313) 444-9734</a></li>
-              <li><Mail className="h-4 w-4" /><a href="mailto:bula@buladev.com">bula@BULADEV.com</a></li>
-              <li><MapPin className="h-4 w-4" /><span>Detroit, Michigan</span></li>
-              <li><Clock className="h-4 w-4" /><span>Mon - Fri: 8:00 AM - 5:00 PM</span></li>
+              <li><i className="fa-solid fa-phone" /><a href="tel:3134449734">(313) 444-9734</a></li>
+              <li><i className="fa-solid fa-envelope" /><a href="mailto:bula@buladev.com">bula@BULADEV.com</a></li>
+              <li><i className="fa-solid fa-location-dot" /><span>Detroit, Michigan</span></li>
+              <li><i className="fa-regular fa-id-card" /><span>Licensed & Insured</span></li>
             </ul>
           </div>
         </div>
@@ -300,21 +301,6 @@ function FooterList({ title, items }: { title: string; items: { label: string; h
     </div>
   );
 }
-
-function FooterTextList({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div>
-      <h3 className="footer-title">{title}</h3>
-      <ul className="image-match-footer-links">
-        {items.map((item) => (
-          <li key={item}><Link href="/#services">{item}</Link></li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-
 
 
 

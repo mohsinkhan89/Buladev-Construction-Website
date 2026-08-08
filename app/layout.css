@@ -733,16 +733,6 @@
   color: #d4d4d8;
 }
 
-.about-page .image-match-socials a {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-}
-
-.about-page .image-match-socials a:hover {
-  background: #f57216;
-  color: #ffffff;
-}
-
 .about-footer-copy {
   max-width: 18rem;
   margin: 1.35rem 0 0;
@@ -907,16 +897,6 @@
 
 .about-page .image-match-footer-copy p {
   color: #52525b;
-}
-
-.about-page .image-match-socials a {
-  background: #071018;
-  color: #ffffff;
-}
-
-.about-page .image-match-socials a:hover {
-  background: #f57216;
-  color: #ffffff;
 }
 
 .about-footer-copy {

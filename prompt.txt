@@ -121,3 +121,6 @@ reference prompt 030:
 
 reference prompt 031:
     update navigation links to point to the correct services path and add services page with corresponding layout and images
+
+reference prompt 032:
+    refactor: update About Us page layout and styles
